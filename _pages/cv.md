@@ -9,18 +9,23 @@ redirect_from:
 
 {% include base_path %}
 
+[Resume in PDF](https://gabearod2.github.io/files/resume_fall_2024.pdf)
+
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* B.S. in Aerospace Engineering, Embry-Riddle Aeronautical University, Expected Spring 2025
+* B.S. in Engineering Physics, Embry-Riddle Aeronautical University, Expected Spring 2025
+  * Minor in Applied Mathematics
+  * Student Athlete, Varsity Baseball (2020-2022)
+  * Academic Chair, Society of Hispanic Professional Engineers (Summer 2023- Spring 2024)
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Jan 2024 - Present: Undergraduate Research Assistant
+  * [Engineering Physics Propulsion Lab @ Embry-Riddle Aeronautical University](https://eppl.us)
+  * Duties Include: 
+    * Updates and improvements to template
+  * Supervisor: Dr. Sergey Drakunov
 
 * Fall 2015: Research Assistant
   * Github University
@@ -40,24 +45,6 @@ Skills
   * Sub-skill 2.2
   * Sub-skill 2.3
 * Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
   
 Service and leadership
 ======
