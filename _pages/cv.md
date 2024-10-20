@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -8,19 +8,18 @@ redirect_from:
 ---
 
 {% include base_path %}
+You can find my one page CV [here](https://gabearod2.github.io/files/resume_fall_2024.pdf).
 
-[One-Page CV](https://gabearod2.github.io/files/resume_fall_2024.pdf)
-
-Education
+# Education
 ======
-* B.S. in Aerospace Engineering & Engineering Physics, Embry-Riddle Aeronautical University, Expected Spring 2025
+### B.S. in Aerospace Engineering & Engineering Physics, Embry-Riddle Aeronautical University, Expected Spring 2025
   * Tracks: Aeronautics & Spacecraft Systems (respectively)
   * Minor: Applied Mathematics
   * Student Athlete, Varsity Baseball (2020-2022)
 
-Professional Experience
+# Professional Experience
 ======
-* Jan 2024 - Present: Undergraduate Research Assistant
+### Jan 2024 - Present: Undergraduate Research Assistant
   * [Engineering Physics Propulsion Lab @ Embry-Riddle Aeronautical University](https://eppl.us)
   * Summary: 
     * Received $15,000 in funding for the development of an autonomous, AI-powered system capable of conducting power plant diagnostics and reports using a Unitree Go2 EDU quadruped, added sensors, and Jetson devices.
@@ -29,7 +28,7 @@ Professional Experience
     * Created lab [Website](https://eppl.us), [LinkedIn](https://linkedin.com/company/eppl-erau-db), and [GitHub Organization](https://github.com/eppl-erau-db) for project demonstration and public visibility. 
   * Supervisor: [Dr. Sergey Drakunov](https://faculty.erau.edu/Sergey.Drakunov)
 
-* Sep 2023 - Dec 2023 : Mechanical Engineering Co-Op
+### Sep 2023 - Dec 2023 : Mechanical Engineering Co-Op
   * [Textron Systems](https://www.textronsystems.com/)
   * Summary: 
     * Developed detailed 3D models of mechanical components using Siemens NX, focusing on Product Manufacturing Information (PMI) and Geometric Dimensioning and Tolerancing (GD&T). 
@@ -37,7 +36,7 @@ Professional Experience
     * Transitioned legacy 2D drawings to modern 3D models, updating outdated specifications and integrating current engineering standards. Developed engineering intuition regarding material tolerances and welding practices.
   * Supervisor: Allison Mustain
 
-* Jun 2023 - Aug 2023: Undergraduate Research Assistant
+### Jun 2023 - Aug 2023: Undergraduate Research Assistant
   * Embry-Riddle Aeronautical University, Physics Department
   * Summary:
     * Developed an autonomous, AI-powered, omnidirectional vehicle leveraging low-latency inference on the Jetson Nano and low-cost hardware. 
@@ -45,7 +44,7 @@ Professional Experience
     * Conceived, modeled, and 3D printed various parts and mechanisms to house hardware and object capture systems.
   * Supervisor: [Dr. John Hughes](https://faculty.erau.edu/John.Hughes)
 
-* May 2022 - Nov 2022: Boeing Career Mentorship Program
+### May 2022 - Nov 2022: Boeing Career Mentorship Program
   * [The Boeing Company](https://www.boeing.com/)
   * Summary:
     * Participated in the Boeing Career Mentorship Program, enabled connections with multiple Boeing employees in interested fields.
@@ -53,7 +52,7 @@ Professional Experience
     * Deepened understanding of professional development and industry trends.
   * Mentor: [Luis Velasquez](https://www.linkedin.com/in/luis-velasquez-7404058a/)
   
-Skills
+# Skills
 ======
 * MATLAB
 * Coding Languages
@@ -62,7 +61,7 @@ Skills
   * C++
 * 
   
-Service and Leadership
+# Service and Leadership
 ======
 * Research Project Lead, Society of Hispanic Professional Engineers (Spring 2024 - Present)
 * Academic Chair, Society of Hispanic Professional Engineers (Summer 2023- Spring 2024)

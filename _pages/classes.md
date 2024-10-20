@@ -1,12 +1,12 @@
 ---
 permalink: /
-title: "Classes"
+title: "My Classes"
 permalink: /classes/
 author_profile: true
 ---
 [Unofficial Transcipt](https://gabearod2.github.io/files/unofficial_transcript_fall_2024.pdf)
 
-### Fall 2024
+### Fall 2024 (Present Courses)
 * Aerospace Structures & Instrumentation
 * Aerospace Structures & Instrumentation Lab
 * Aerospace Structures II
