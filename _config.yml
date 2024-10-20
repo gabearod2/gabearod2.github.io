@@ -10,7 +10,7 @@
 locale                   : "en-US"
 title                    : "Home"
 title_separator          : "-"
-name                     : &name "Gabriel Rodriguez"
+name                     : "Home"
 description              : &description "A doer, interested in robotics, RL, HRI, and jiu-jitsu."
 url                      : https://gabearod2.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -81,8 +81,6 @@ publication_category:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
-
-# Projects Category
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -247,15 +245,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
   # _publications
   - scope:
       path: ""
