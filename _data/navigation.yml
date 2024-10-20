@@ -5,12 +5,13 @@
 # prevent it from being included in the site.
 
 main:  
-  - title: "Projects"
-    url: /projects/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
   - title: "CV"
     url: /cv/
+
+  - title: "Projects"
+    url: /projects/
+
+  - title: "Classes"
+    url: /classes/
+  
 
