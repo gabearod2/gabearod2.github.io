@@ -13,11 +13,10 @@ redirect_from:
 
 Education
 ======
-* B.S. in Aerospace Engineering, Embry-Riddle Aeronautical University, Expected Spring 2025
-* B.S. in Engineering Physics, Embry-Riddle Aeronautical University, Expected Spring 2025
-  * Minor in Applied Mathematics
+* B.S. in Aerospace Engineering & Engineering Physics, Embry-Riddle Aeronautical University, Expected Spring 2025
+  * Tracks: Aeronautics & Spacecraft Systems (respectively)
+  * Minor: Applied Mathematics
   * Student Athlete, Varsity Baseball (2020-2022)
-  * Academic Chair, Society of Hispanic Professional Engineers (Summer 2023- Spring 2024)
 
 Professional Experience
 ======
@@ -33,7 +32,9 @@ Professional Experience
 * Sep 2023 - Dec 2023 : Mechanical Engineering Co-Op
   * [Textron Systems](https://www.textronsystems.com/)
   * Summary: 
-    * Merging pull requests
+    * Developed detailed 3D models of mechanical components using Siemens NX, focusing on Product Manufacturing Information (PMI) and Geometric Dimensioning and Tolerancing (GD&T). 
+    * Strengthened proficiency in ANSYS through hands-on experience with linear static analysis. Gained exposure to nonlinear analysis, enhancing my understanding of material behavior under complex loads.
+    * Transitioned legacy 2D drawings to modern 3D models, updating outdated specifications and integrating current engineering standards. Developed engineering intuition regarding material tolerances and welding practices.
   * Supervisor: Allison Mustain
 
 * Jun 2023 - Aug 2023: Undergraduate Research Assistant
@@ -61,6 +62,9 @@ Skills
   * C++
 * 
   
-Service and leadership
+Service and Leadership
 ======
-* Currently signed in to 43 different slack teams
+* Research Project Lead, Society of Hispanic Professional Engineers (Spring 2024 - Present)
+* Academic Chair, Society of Hispanic Professional Engineers (Summer 2023- Spring 2024)
+* Student Volunteer, Society of Hispanic Professional Engineers (Fall 2020- Summer 2023)
+
