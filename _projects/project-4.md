@@ -1,6 +1,6 @@
 ---
 title: "Omnidirectional Object Capture"
-excerpt: "Artificially Intelligent Mecanum Wheeled Vehicle for Object Capture <br/><br/><img src='/images/omni_logo.png'>"
+excerpt: "An Artificially Intelligent Mecanum Wheeled Vehicle for Object Capture <br/><br/><img src='/images/omni_logo.png'>"
 collection: projects
 ---
 

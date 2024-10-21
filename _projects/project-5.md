@@ -1,6 +1,6 @@
 ---
 title: "SHPE OmniDocker"
-excerpt: "AI-powered Docking for Space Applications <br/><br/><img src='/images/shpe_logo.png'>"
+excerpt: "AI-Powered Docking for Space Applications <br/><br/><img src='/images/shpe_logo.png'>"
 collection: projects
 ---
 
