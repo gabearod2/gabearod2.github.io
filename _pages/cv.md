@@ -11,14 +11,13 @@ redirect_from:
 You can find my one page CV [here](https://gabearod2.github.io/files/resume_fall_2024.pdf).
 
 # Education
-======
-### B.S. in Aerospace Engineering & Engineering Physics, Embry-Riddle Aeronautical University, Expected Spring 2025
+### B.S. in Aerospace Engineering & Engineering Physics, Embry-Riddle Aeronautical University, Expected May 2025
   * Tracks: Aeronautics & Spacecraft Systems (respectively)
   * Minor: Applied Mathematics
+  * GPA: 4.00/4.00
   * Student Athlete, Varsity Baseball (2020-2022)
 
 # Professional Experience
-======
 ### Jan 2024 - Present: Undergraduate Research Assistant
   * [Engineering Physics Propulsion Lab @ Embry-Riddle Aeronautical University](https://eppl.us)
   * Summary: 
@@ -53,13 +52,32 @@ You can find my one page CV [here](https://gabearod2.github.io/files/resume_fall
   * Mentor: [Luis Velasquez](https://www.linkedin.com/in/luis-velasquez-7404058a/)
   
 # Skills
-======
+### Proficient in:
+* Autodesk Inventor
+* Siemens NX
 * MATLAB
-* Coding Languages
-  * MATLAB
-  * Python
-  * C++
-* 
+* Python
+* ROS2
+* Linux Systems
+* Edge Computing
+* Isaac Lab
+* Git
+* Docker
+### Familiar with:
+* C++ with CMake
+* Simulink
+* CATIA v5
+* STK
+* SolidWorks
+* Nastran
+* JavasScript
+* ANSYS
+* Isaac Gym
+* Nav2
+* PyTorch
+### Languages
+* English (Fluent)
+* Spanish (Full Professional Proficiency)
   
 # Service and Leadership
 ======

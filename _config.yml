@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Home"
+title                    : "Gabriel Rodriguez"
 title_separator          : "-"
 name                     : "Home"
 description              : &description "A doer, interested in robotics, RL, HRI, and jiu-jitsu."
