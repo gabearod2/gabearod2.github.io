@@ -10,7 +10,7 @@
 locale                   : "en-US"
 title                    : "Gabriel Rodriguez"
 title_separator          : "-"
-name                     : "Home"
+name                     : &name "Gabriel Rodriguez"
 description              : &description "A doer, interested in robotics, RL, HRI, and jiu-jitsu."
 url                      : https://gabearod2.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
