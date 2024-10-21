@@ -1,7 +1,9 @@
 ---
-title: "AMIGO"
-excerpt: "Autonomous Machine for Inspecting Gas and Operations<br/><img src='/images/amigo.jpg'>"
+title: "Autonomous Machine for Inspecting Gas & Operations (AMIGO)"
+excerpt: "An Artificially Intelligent Quadruped for Powerplant Diagnostics <br/><br/><img src='/images/amigo_logo.png'>"
 collection: projects
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+In partnership with [Steam Solutions](https://www.steamsolutions.com/), my team is developing a platform for powerplant diagnostics and maintenance. Utilizing Nav2, we can autonomously navigate through a 2D environment...
+
+TODO: *Add description of project details and links.*

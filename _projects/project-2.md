@@ -1,7 +1,7 @@
 ---
 title: "ToppleBot"
-excerpt: "A scalable robot for space applications."
+excerpt: "A Scalable Robot Architecture for Space Applications <br/><br/><img src='/images/topplebot_logo.png'>"
 collection: projects
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+TODO: *Add description of project details and links.*
