@@ -39,7 +39,7 @@ Professional Experience
   * Supervisor: Allison Mustain
 
 * **Jun 2023 - Aug 2023: Undergraduate Research Assistant**
-  * Embry-Riddle Aeronautical University, Physics Department
+  * [Embry-Riddle Aeronautical University, Physics Department](https://daytonabeach.erau.edu/college-arts-sciences/physical-sciences)
   * Summary:
     * Developed an autonomous, AI-powered, omnidirectional vehicle leveraging low-latency inference on the Jetson Nano and low-cost hardware. 
     * Authored a PD control algorithm in Python to maneuver the vehicle based on input from the AI object detection system to successfully capture a free-falling object, solely using image data. 
