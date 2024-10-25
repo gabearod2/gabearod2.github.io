@@ -569,3 +569,9 @@ border-radius: .1em;
 .ai-inverse {
   color: #fff;
 }
+.center-content {
+  max-width: 800px; /* Set a max width for the content */
+  margin: 0 auto;   /* Center horizontally */
+  padding: 20px;    /* Add padding for mobile spacing */
+  text-align: center; /* Center-align text */
+}
