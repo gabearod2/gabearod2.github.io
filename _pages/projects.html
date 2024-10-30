@@ -5,10 +5,9 @@ permalink: /projects/
 author_profile: true
 ---
 
-<div class="center-content"></div>
-  {% include base_path %}
+{% include base_path %}
 
-  {% for post in site.projects %}
-    {% include archive-single.html %}
-  {% endfor %}
-</div>
+{% for post in site.projects %}
+  {% include archive-single.html %}
+{% endfor %}
+
