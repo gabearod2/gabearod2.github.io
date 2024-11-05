@@ -4,14 +4,17 @@ excerpt: "An Artificially Intelligent Quadruped for Powerplant Diagnostics <br/>
 collection: projects
 ---
 
-<!-- Heading and Summary -->
+https://github.com/gabearod2/IsaacLab
+<!-- Heading and Summary Alt + Z-->
 <h3>Summary</h3>
 
-<div class="center-content">
     <p>
-        This research project is loosely structured allowing for exploration into my team's interests. Our end goal, however, is to develop an autonomous robotic platform for powerplant diagnostics. Our canvas is the Unitree Go2 Edu quadruped, where we have added a Jetson AGX Orin, 2D LiDAR, ZED X Camera, Raspberry Pi, and other equipment. With our additions, the robot can currently autonomously navigate in two dimensions, leveraging <a href="https://docs.nav2.org/" target="_blank">Nav2</a>. Our custom implementation, mostly authored by my colleague, <a href="https://www.linkedin.com/in/jose-castelblanco-002640195/" target="_blank">Jose Castelblanco</a>, can be found <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">here</a>.
+        As a part of the AMIGO project, I handle the RL deployment, ROS functionalities, and ocassional prototyping. While this research project is loosely structured allowing for exploration into my team's interests, our end goal is to develop an autonomous robotic platform for powerplant diagnostics. Our canvas is the Unitree Go2 Edu quadruped, where we have added a Jetson AGX Orin, 2D LiDAR, ZED X Camera, Raspberry Pi, and other equipment. With our additions, the robot can currently autonomously navigate in two dimensions, leveraging <a href="https://docs.nav2.org/" target="_blank">Nav2</a>. We have also successfully trained custom RL policies through <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, and deployed them with my <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">ROS2 deployment framework</a>.
+
+        One of the tasks I was given was to develop a locomotion controller to tackle the open-backed stairs found in many powerplants. While the controller is not fully developed, I have learned about RL, Isaac Lab, Isaac Gym, and RL deployment in the process. As mentioned above, I developed a ROS2 deployment of the RL policies that has now been relegated to strictly navigation deployment as the added ROS layer introduces excessive delays into the system. For this reason, I am now working on a deployment framework through Unitree's SDK, minimizing delays. 
     </p>
 
+<div class="center-content">
     <!-- AMIGO Image, Centered -->
     <p align="center">
         <img src="/images/amigo.jpg" alt="The team, huddled around the AMIGO!" width="600"/>
@@ -22,11 +25,13 @@ collection: projects
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
-    
+</div>
+
     <!-- Attributions Section -->
     <h3>Attributions</h3>
 
     <p>
         Funded by <a href="https://www.steamsolutions.com/" target="_blank">Steam Solutions</a>, and housed by the <a href="https://eppl.us" target="_blank">Engineering Physics Propulsion Lab @ ERAU</a>.
+
+        Our custom implementation, mostly authored by my colleague, <a href="https://www.linkedin.com/in/jose-castelblanco-002640195/" target="_blank">Jose Castelblanco</a>, can be found <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">here</a>. 
     </p>
-</div>
