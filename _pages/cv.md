@@ -22,12 +22,12 @@ Education
 Professional Experience
 ======
 * **Jan 2024 - Present: Undergraduate Research Assistant**
-  * [Engineering Physics Propulsion Lab @ Embry-Riddle Aeronautical University](https://eppl.us)
+  * [Engineering Physics Propulsion Lab @ Embry-Riddle Aeronautical University](https://www.linkedin.com/company/eppl-erau-db)
   * Summary: 
     * Received $15,000 in funding for the development of an autonomous, AI-powered system capable of conducting power plant diagnostics and reports using a Unitree Go2 EDU quadruped, added sensors, and Jetson devices.
     * Developed a ROS2 workspace for deploying low-level (locomotion) and high-level (navigation) control policies with Python and C++ packages, training all policies through massively parallel reinforcement learning with Isaac Lab.
     * Collaborated with team members to implement Nav2 using LiDAR and camera data, for autonomous 2D navigation.
-    * Created lab [Website](https://eppl.us), [LinkedIn](https://linkedin.com/company/eppl-erau-db), and [GitHub Organization](https://github.com/eppl-erau-db) for project demonstration and public visibility. 
+    * Created lab [LinkedIn](https://linkedin.com/company/eppl-erau-db), and [GitHub Organization](https://github.com/eppl-erau-db) for project demonstration and public visibility. 
   * Supervisor: [Dr. Sergey Drakunov](https://faculty.erau.edu/Sergey.Drakunov)
 
 * **Sep 2023 - Dec 2023 : Mechanical Engineering Co-Op**
