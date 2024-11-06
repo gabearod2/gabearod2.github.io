@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hey! My name is Gabriel Rodriguez and I am currently a student at Embry-Riddle Aeronautical University, where I’m pursuing dual Bachelor of Science degrees in Aerospace Engineering and Engineering Physics, with a minor in Applied Mathematics. I expect to graduate in May of 2025, and I intend to continue studying. I’m preparing for graduate school, with the goal of specializing in controls. I’m passionate about the integration of robots into society and I hope to contribute to innovations that make this integration smoother and more impactful.
+Hello, my name is Gabriel Rodriguez and I am currently a student at Embry-Riddle Aeronautical University, where I’m pursuing dual Bachelor of Science degrees in Aerospace Engineering and Engineering Physics, with a minor in Applied Mathematics. I expect to graduate in May of 2025, and I intend to continue studying. I’m preparing for graduate school, with the goal of specializing in controls. I’m passionate about the integration of robots into society and I hope to contribute to innovations that make this integration smoother and more impactful.
 
 Right now, I’m involved in several exciting projects:
 - **AMIGO** at the [Engineering Physics Propulsion Lab (EPPL)](https://www.linkedin.com/company/eppl-erau-db), where I’m working on advanced autonomous robotic systems for powerplant diagnostics, training and deploying RL control policies.
