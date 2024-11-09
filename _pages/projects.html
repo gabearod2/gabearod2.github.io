@@ -7,7 +7,19 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.projects %}
-  {% include archive-single.html %}
-{% endfor %}
+{% assign ordered_categories = "academic,personal" | split: "," %}
 
+{% for category_name in ordered_categories %}
+  {% case category_name %}
+    {% when "academic" %}
+      <h2>Academic</h2><hr />
+    {% when "personal" %}
+      <h2>Personal</h2><hr />
+  {% endcase %}
+
+  {% for post in site.ptojects %}
+    {% if post.category == category_name %}
+      {% include archive-single.html %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
