@@ -7,19 +7,23 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign ordered_categories = "academic,personal" | split: "," %}
-
-{% for category_name in ordered_categories %}
-  {% case category_name %}
-    {% when "academic" %}
-      <h2>Academic</h2><hr />
-    {% when "personal" %}
-      <h2>Personal</h2><hr />
-  {% endcase %}
-
-  {% for post in site.ptojects %}
-    {% if post.category == category_name %}
+<!-- New style rendering if publication categories are defined -->
+{% if site.project_category %}
+  {% for category in site.project_category  %}
+    {% assign title_shown = false %}
+    {% for post in site.projects %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        <h2>{{ category[1].title }}</h2><hr />
+        {% assign title_shown = true %}
+      {% endunless %}
       {% include archive-single.html %}
-    {% endif %}
+    {% endfor %}
   {% endfor %}
-{% endfor %}
+{% else %}
+  {% for post in site.projects reversed %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
