@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-You can find my one page CV [here](https://gabearod2.github.io/files/resume_fall_2024.pdf).
+You can find my one page resume [here](https://gabearod2.github.io/files/resume_fall_2024.pdf).
 
 
 Education
