@@ -11,16 +11,14 @@ redirect_from:
 You can find my one page resume [here](https://gabearod2.github.io/files/resume_fall_2024.pdf).
 
 
-Education
----
+## Education
 * **B.S. in Aerospace Engineering & Engineering Physics, Embry-Riddle Aeronautical University, Expected May 2025**
   * Tracks: Aeronautics & Spacecraft Systems (respectively)
   * Minor: Applied Mathematics
   * GPA: 4.00/4.00
   * Student Athlete, Varsity Baseball (2020-2022)
 
-Professional Experience
----
+## Professional Experience
 * **Jan 2024 - Present: Undergraduate Research Assistant**
   * [Engineering Physics Propulsion Lab @ Embry-Riddle Aeronautical University](https://www.linkedin.com/company/eppl-erau-db)
   * Summary: 
@@ -54,8 +52,7 @@ Professional Experience
     * Deepened understanding of professional development and industry trends.
   * Mentor: [Luis Velasquez](https://www.linkedin.com/in/luis-velasquez-7404058a/)
   
-Skills
----
+## Skills
 
 **Proficient in:**
 * Autodesk Inventor
@@ -82,12 +79,11 @@ Skills
 * Nav2
 * PyTorch
 
-**Languages**
+## Languages
 * English (Fluent)
 * Spanish (Full Professional Proficiency)
   
-Service and Leadership
----
+## Service and Leadership
 * Research Project Lead, Society of Hispanic Professional Engineers (Spring 2024 - Present)
 * Academic Chair, Society of Hispanic Professional Engineers (Summer 2023- Spring 2024)
 * Student Volunteer, Society of Hispanic Professional Engineers (Fall 2020- Summer 2023)
