@@ -16,20 +16,29 @@ category: academic
 <h3>Summary</h3>
 
     <p>
-        The ToppleBot project builds off of related momentum wheel cubes like <a href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, <a href="https://www.wevolver.com/specs/cubli" target="_blank">Cubli</a>, and <a href="https://github.com/remrc/Self-Balancing-Cube" target="_blank">REM-RC's Balancing Cube</a>. This project is in partial fullfillment of my Engineering Physics Bachelor's degree, serving as my senior design project. We have recently written out Conceptual Design Report, which can be found <a href="https://gabearod2.github.io/files/topplebot_codr.pdf" target="_blank">here</a>. As the software and communications engineer I am implementing a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I am sharpening my skills in C/C++, controls, and ROS. My current project repo can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a>.
+        The ToppleBot project builds off of related momentum wheel cubes like <a href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, <a href="https://www.wevolver.com/specs/cubli" target="_blank">Cubli</a>, and <a href="https://github.com/remrc/Self-Balancing-Cube" target="_blank">REM-RC's Balancing Cube</a>. This project is in partial fullfillment of my Engineering Physics Bachelor's degree, serving as my senior design project. We have recently written out Conceptual Design Report, which can be found <a href="https://gabearod2.github.io/files/topplebot_codr.pdf" target="_blank">here</a>. As the software and communications engineer I am implementing a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I am sharpening my skills in C/C++, controls, and ROS2. My current project repo can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a>, with support for publishing IMU messages to ROS topics. 
     </p>
 
 <!-- Current Status and Media-->
 <h3>Current Status</h3>
 
     <p>
-        The ESP32 will be publishing IMU messages to ROS, based on the readings from the onboard IMU, an MPU 9250. The control station will then subscribe to this topic, interpreting the incoming information for integration into ROS's tf2 system. The control station will then be able to display the current state of the ToppleBot using Rviz. Currently, I have established communication between the ESP32 and the control station, as well as deployed a configuration and IMU reading algorithm. Pictured below is one of the first tests of the IMU. Notice I'm using terminator (so underrated) because it is FAR better than using seperate terminals!
-    </p>
-    <p>
-        By the end of this semester, I will have the ToppleBot display reflect the orientation of the IMU, and my team members will have finished development of our braking system for kip-up and topple behaviors. 
+        As mentioned, the ESP32 is publishing IMU messages to ROS, based on the readings from the onboard IMU, an MPU 9250. The control station then subscribes to this topic, interpreting the incoming information for integration into ROS's tf2 system. The control station then displays the current state of the ToppleBot using Rviz. Currently, I have established communication between the ESP32 and can display orientation data from the IMU. Pictured below, you can see where I first established communication between the ESP32 and the MPU 9250.
     </p>
 
     <!-- IMU Image, Centered -->
     <p align="center">
         <img src="/images/imu_test.jpg" alt="Testing the IMU for ToppleBot" width="600"/>
     </p>
+
+    <p>
+        By the end of this semester, I will have the RViz reflect the visual appearance of the robot, and track its odometry. For now though, below is a quick demo of orientation tracking.
+    </p>
+    
+    <!-- AMIGO Video, Centered -->
+    <p align="center">
+        <iframe width="350" height="600" src="https://www.youtube.com/embed/emTjtP5xAF8" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+

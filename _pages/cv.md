@@ -55,29 +55,10 @@ You can find my one page resume [here](https://gabearod2.github.io/files/resume_
 ## Skills
 
 **Proficient in:**
-* Autodesk Inventor
-* Siemens NX
-* MATLAB
-* Python
-* ROS2
-* Linux Systems
-* Edge Computing
-* Isaac Lab
-* Git
-* Docker
+Autodesk Inventor, Siemens NX, MATLAB, Python, ROS2, Linux Systems, Edge Computing, Isaac Lab, Git, Docker
 
 **Familiar with:**
-* C++ with CMake
-* Simulink
-* CATIA v5
-* STK
-* SolidWorks
-* Nastran
-* JavasScript
-* ANSYS
-* Isaac Gym
-* Nav2
-* PyTorch
+C/C++ with CMake, Micro-ROS, Simulink, CATIA v5, STK, SolidWorks, Nastran, JavasScript, ANSYS, Isaac Gym, Nav2, PyTorch
 
 ## Languages
 * English (Fluent)
