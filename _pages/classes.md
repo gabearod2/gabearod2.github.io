@@ -4,9 +4,38 @@ title: "My Classes"
 permalink: /classes/
 author_profile: true
 ---
-[Unofficial Transcript](https://gabearod2.github.io/files/unofficial_transcript_fall_2024.pdf)
+[Unofficial Transcript](https://gabearod2.github.io/files/unofficial_transcript_spring_2025.pdf)
 
-## Fall 2024 (Present Courses)
+## Spring 2025
+* ### Aircraft Detail Design
+
+Detail design of aircraft, which may include component part or test article design. Design of an aircraft or test article from the general layout to the design of its detail parts and necessary tools.
+
+* ### Microcomputers & Electronics Instrumentation
+
+This course will provide students with a background in electronics as it applies to the design of circuits of measuring instruments and to interface sensors and computers. The program of study will concentrate on following the form of the electrical signal from light, pressure, temperature and other sensors as it proceeds through signal conditioning circuits and into the microcomputer for further processing.
+
+* ### Microcomputers & Electronics Instrumentation Lab
+
+Two 90 minute laboratory sessions per week, with experiments complementing the lectures of Microcomputers & Electronics Instrumentation on a weekly basis. The labs will introduce the students to software modeling of circuits; cover analog devices such as diodes, transistors, op-amps, motors; digital devices such as a microcontroller, multiplexers, communication radios; and also practice device level C-programming concepts.
+
+* ### Space Systems Design II
+
+Continuation of Space System Design I, completion of the senior design project, involving solution of a complex problem relevant to engineering physics that incorporates appropriate industry standards and presentation of results in a seminar format.
+
+* ### Experimental Dynamics and Control
+
+Linear Control. Open loop and closed loop system feedback analysis. Modeling, linearization and parameter system identification and validation of dynamical systems. State space system representation, system block diagrams, feedback and transfer functions. Control design based on transient and steady state specifications. Concepts of stability and controllability. Stability criteria. Control design and analysis of dynamical systems in time and frequency domains.
+
+* ### Experimental Dynamics and Control Lab
+
+Laboratory for the dynamics and control of systems. Dynamical systems testing through instrumentation, amplifiers, analog-to-digital converters, boolean algebra, logic gates and microprocessors, data acquisition and data analysis. Modeling of dynamics for flexible link systems, rotational systems including electrical servos and transformers; experimental determination of the system natural frequency. Control design and implementation based on time domain transient and steady state requirements; pole placement and state feedback control design and implementation. Full-state-feedback vs. partial-state-feedback analysis. Finding first- and second-order system parameters. System response analysis to various input types. Sensor bias removal techniques and actuator saturation. Processing and analysis of experimental and simulated data; report writing and data presentation.
+
+* ### Control System Theory and Engineering Applications 
+
+Physics-based modeling, analysis, and design of linear and nonlinear control systems using time and frequency domain techniques. System linearization and Lyapunov's first theorem, closed-loop (feedback) control system performance analysis and stability, stability margins, Laplace transforms, state space models, PID controllers, linear quadratic regulators (LQR), linear quadratic gaussian (LQG) control, pole placement methods, root locus, linear observer design, and control design and numerical simulation. Introduction to Lyapunov's second theorem and overview of nonlinear control methods including adaptive control, neural network-based control, and sliding mode control.
+
+## Fall 2024
 * ### Aerospace Structures & Instrumentation
 
 Lecture-based course to support the Structures and Instrumentation Laboratory. Course emphasizes aerospace vehicle testing through instrumentation, data acquisition, and data reduction. Test plans and design are utilized.
