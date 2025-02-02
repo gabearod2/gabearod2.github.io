@@ -6,7 +6,7 @@ author_profile: true
 ---
 [Unofficial Transcript](https://gabearod2.github.io/files/unofficial_transcript_spring_2025.pdf)
 
-## Spring 2025
+## Spring 2025 (Current Classes)
 * ### Aircraft Detail Design
 
 Detail design of aircraft, which may include component part or test article design. Design of an aircraft or test article from the general layout to the design of its detail parts and necessary tools.
@@ -79,7 +79,7 @@ Aircraft equations of motion. State variable representation of the equations of 
 
 * ### Electrical Engineering Fundamentals
 
-Circuit theory and variables. Analysis of electrical circuits using Ohm's and Kirchloff's laws. Nodal and mesh analysis. Principles of superposition and source transformation. Thevenin and Norton equivalent circuits. Wheatstone bridge. Voltage-current relationship for passive elements. First order transient analysis. Phasors and steady-state AC analysis. Filter concepts.
+Circuit theory and variables. Analysis of electrical circuits using Ohm's and Kirchhoff's laws. Nodal and mesh analysis. Principles of superposition and source transformation. Thevenin and Norton equivalent circuits. Wheatstone bridge. Voltage-current relationship for passive elements. First order transient analysis. Phasors and steady-state AC analysis. Filter concepts.
 
 * ### Electrical Engineering Fundamentals Lab
 
@@ -102,7 +102,7 @@ Development of longitudinal, lateral and directional stability and control equat
 ## Spring 2023
 * ### Aerospace Structures I
 
-Methods of stress analysis of statically determinate lightweight structural systems. Applications include space structures and semimonocoque structures. Inertia force and load factor computation. Thermal Stresses. Three-dimensional beam bending. Shear flow. Materials considerations. Finite element modeling and computer-aided analysis.
+Methods of stress analysis of statically determinate lightweight structural systems. Applications include space structures and semi-monocoque structures. Inertia force and load factor computation. Thermal Stresses. Three-dimensional beam bending. Shear flow. Materials considerations. Finite element modeling and computer-aided analysis.
 
 * ### Introduction to Space Systems Design 
 

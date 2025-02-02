@@ -26,10 +26,19 @@ category: academic
         As mentioned, the ESP32 is publishing IMU messages to ROS, based on the readings from the onboard IMU, an MPU 9250. The control station then subscribes to this topic, interpreting the incoming information for integration into ROS's tf2 system. The control station then displays the current state of the ToppleBot using Rviz. Currently, I have established communication between the ESP32 and can display the orientation of our demo model. Here is a quick demo of it working.
     </p>
 
-    <!-- ToppleBot Video, Centered -->
+    <!-- ToppleBot Initial Orientation Video, Centered -->
     <p align="center">
         <iframe width="600" height="350" src="https://www.youtube.com/embed/PyNexkg9_SY" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
 
+    <p>
+        Recently, I also got an odometry system up and running, based solely off of the IMU data. Modeling each corner of the cube as a node, I dynamically update their positions using the quaterion from the AHRS algorithm. Then, using the projected gravity vector, I determine which node is the "balancing node" which allows me to determine the translation from the previous balancing node to the current one. I can then determine the position of the model and it's orientation and display it through RViz. 
+    </p>
+
+    <!-- ToppleBot Odometry Video, Centered -->
+    <p align="center">
+        <iframe width="600" height="350" src="https://www.youtube.com/watch?v=oUXkUBIO_gA" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture" allowfullscreen></iframe>

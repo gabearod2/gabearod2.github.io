@@ -16,7 +16,7 @@ category: academic
 <h3>Summary</h3>
 
     <p>
-        As a part of the AMIGO project, I handle the RL deployment, ROS functionalities, and support rapid prototyping efforts. While this research project is loosely structured, allowing for exploration into my team's interests, our end goal is to develop an autonomous robotic platform for powerplant diagnostics. Our canvas is the Unitree Go2 Edu quadruped, where we have added a Jetson AGX Orin, 2D LiDAR, ZED X Camera, Raspberry Pi, and other equipment. With our additions, the robot can currently autonomously navigate in two dimensions, leveraging <a href="https://docs.nav2.org/" target="_blank">Nav2</a>. I have also successfully trained custom RL policies through <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, and deployed them with my <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">ROS2 deployment framework</a>.
+        As a part of the AMIGO project, I handle the RL deployment, ROS functionalities, and support rapid prototyping efforts. While this research project is loosely structured, allowing for exploration into my team's interests, our end goal is to develop an autonomous robotic platform for powerplant diagnostics. Our canvas is the Unitree Go2 EDU quadruped, where we have added a Jetson AGX Orin, 2D LiDAR, ZED X Camera, Raspberry Pi, and other equipment. With our additions, the robot can currently autonomously navigate in two dimensions, leveraging <a href="https://docs.nav2.org/" target="_blank">Nav2</a>. I have also successfully trained custom RL policies through <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, and deployed them with my <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">ROS2 deployment framework</a>.
 
     </p>
 
@@ -37,6 +37,10 @@ category: academic
         <iframe width="600" height="350" src="https://www.youtube.com/embed/54QndZJDfPw" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+
+    <p>
+        This semester, our goal is tackle autonomous room searching. This will be an invaluable asset during real-world deployment, allowing us to find targets of interest in dynamically changing areas. Based off of this <a href="https://ieeexplore.ieee.org/abstract/document/1262545" target="_blank">paper</a>, we are modeling the current region (coming from the Nav2 costmap) as a neural network, and determining the robot's next waypoint based on Hodgkin and Huxley’s membrane model for a biological neural system. This approach is dynamic as the neurons themselves represent obstacles, walls, and free space that are dynamically updated by local costmap created by the onboard real sense camera. 
     </p>
 
 <!-- Attributions Section -->
