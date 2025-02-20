@@ -16,14 +16,14 @@ category: academic
 <h3>Summary</h3>
 
     <p>
-        The ToppleBot project builds off of related momentum wheel cubes like <a href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, <a href="https://www.wevolver.com/specs/cubli" target="_blank">Cubli</a>, and <a href="https://github.com/remrc/Self-Balancing-Cube" target="_blank">REM-RC's Balancing Cube</a>. This project is in partial fullfillment of my Engineering Physics Bachelor's degree, serving as my senior design project. We have recently written out Conceptual Design Report, which can be found <a href="https://gabearod2.github.io/files/topplebot_codr.pdf" target="_blank">here</a>. As the software and communications engineer I am implementing a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I am sharpening my skills in C/C++, controls, and ROS2. My current project repo can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a>, with support for publishing IMU messages to ROS topics. 
+        The ToppleBot project builds off of related momentum wheel cubes like <a href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, <a href="https://www.wevolver.com/specs/cubli" target="_blank">Cubli</a>, and <a href="https://github.com/remrc/Self-Balancing-Cube" target="_blank">REM-RC's Balancing Cube</a>. This project is in partial fullfillment of my Engineering Physics Bachelor's degree, serving as my senior design project. We have recently written out Conceptual Design Report, which can be found <a href="https://gabearod2.github.io/files/topplebot_codr.pdf" target="_blank">here</a>. As the software and communications engineer I am implementing a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I am sharpening my skills in C/C++, controls, and ROS2. My current project repos can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a> and <a href="https://github.com/gabearod2/topplebot_station" target="_blank">here</a>, with support for publishing IMU messages to ROS and visualizing orientation in RViz. 
     </p>
 
 <!-- Current Status and Media-->
 <h3>Current Status</h3>
 
     <p>
-        As mentioned, the ESP32 is publishing IMU messages to ROS, based on the readings from the onboard IMU, an MPU 9250. The control station then subscribes to this topic, interpreting the incoming information for integration into ROS's tf2 system. The control station then displays the current state of the ToppleBot using Rviz. Currently, I have established communication between the ESP32 and can display the orientation of our demo model. Here is a quick demo of it working.
+        As mentioned, the ESP32 is publishing IMU messages to ROS, based on the readings from the onboard IMU, an MPU 9250. The control station then subscribes to this topic, interpreting the incoming information for integration into ROS's tf2 system. The control station then displays the current state of the ToppleBot using Rviz. Currently, I have established communication between the ESP32 and can display the orientation of our demo model. Here is a quick demo of my initial integration.
     </p>
 
     <!-- ToppleBot Initial Orientation Video, Centered -->
@@ -34,7 +34,7 @@ category: academic
     </p>
 
     <p>
-        Recently, I also got an odometry system up and running, based solely off of the IMU data. Modeling each corner of the cube as a node, I dynamically update their positions using the quaterion from the AHRS algorithm. Then, using the projected gravity vector, I determine which node is the "balancing node" which allows me to determine the translation from the previous balancing node to the current one. I can then determine the position of the model and it's orientation and display it through RViz. 
+        Recently, I also got an odometry system up and running, based solely off of the IMU data. Modeling each corner of the cube as a node, I dynamically update their positions using the quaterion from the AHRS algorithm. Then, using the projected gravity vector, I determine which node is the "balancing node" which allows me to determine the translation from the previous balancing node to the current one. I can then determine the position of the model and it's orientation and display it through RViz. Initially the visualization updated slowly and often mispresented the system orientation. 
     </p>
 
     <!-- ToppleBot Odometry Video, Centered -->
@@ -42,3 +42,15 @@ category: academic
         <iframe width="600" height="350" src="https://www.youtube.com/embed/oUXkUBIO_gA" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+
+    <p>
+        To combat latency, I split the Micro-ROS publishing and AHRS alogirthm into two different FreeRTOS tasks. The fidelity of the visualization system was gretly improved as a result of this change. I still am working to play with the various frequency parameters, for publishing and updating the algorithm, but the following video shows the recently improved results.
+    </p>
+
+    <!-- ToppleBot Odometry Video, Updated, Centered -->
+    <p align="center">
+        <iframe width="600" height="350" src="https://www.youtube.com/embed/AF9I7S65SIE" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
