@@ -11,132 +11,159 @@ redirect_from:
 
 <style>
   ul {
-      list-style-type: square; /* Options: circle, square, none */
+      list-style-type: disc;
+      padding-left: 20px;
+  }
+  .cv-section {
+      margin-bottom: 20px;
+  }
+  .cv-title {
+      font-weight: bold;
+      font-size: 1.2em;
+  }
+  .cv-date, .cv-gpa {
+      float: right;
+  }
+  .cv-content {
+      margin-left: 15px;
+  }
+  .cv-divider {
+      border-top: 2px solid #4d4d4d;
+      margin: 0px 0;
   }
 </style>
 
-<style>
-  .indented {
-      padding-left: 15px; /* Adjust as needed */
-  }
-</style>
-
 <p>
-  You can find my one page resume <a href="https://gabearod2.github.io/files/resume.pdf" target="_blank">here</a> and my downloadable CV <a href="https://gabearod2.github.io/files/cv.pdf" target="_blank">here</a>.
+  Download my <a href="https://gabearod2.github.io/files/resume.pdf" target="_blank">one-page resume</a> and my <a href="https://gabearod2.github.io/files/cv.pdf" target="_blank">full CV</a>.
 </p>
 
-<h2>Education</h2> 
-<p>
-  <em><strong>Embry-Riddle Aeronautical University, Daytona Beach, FL</strong></em><br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Aug 2020 - Exp. May 2025<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;B.S. Aerospace Engineering, Aeronautics<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;B.S. Engineering Physics, Spacecraft Systems<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Minor: Applied Mathematics<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;GPA: 3.955/4.000<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Student Athlete, Varsity Baseball (2020-2022)<br/>
+<div class="cv-section">
+  <div class="cv-title">Research Interests</div>
+  <div class="cv-divider"></div>
+
+  <p>
+    <strong>Control Techniques:</strong> Model-based control and optimization for real-time implementation on robots.<br/>
+    <strong>Embodied AI:</strong> Low-latency AI inference for robotic autonomy and thinking.<br/>
+    <strong>Robotics Applications:</strong> Controlling robots to perform real-world tasks safely and effectively.<br/>
+  </p>
+
+</div>
+
+<div class="cv-section">
+  <div class="cv-title">Education</div>
+  <div class="cv-divider"></div>
+
+  <p><strong>Embry-Riddle Aeronautical University, Daytona Beach, FL</strong> <span class="cv-date">Aug 2020 - May 2025</span><br/>
+  B.S. Aerospace Engineering (Aeronautics) | B.S. Engineering Physics (Spacecraft Systems) <span class="cv-gpa">GPA: 3.95/4.00</span> <br/>
+  Minor in Applied Mathematics | Varsity Baseball (2020-2022)<br/>
+  </p>
+
+</div>
+
+<div class="cv-section">
+  <div class="cv-title">Research Experience</div>
+  <div class="cv-divider"></div>
+
+  <p><strong>Undergraduate Research Intern, Engineering Physics Propulsion Lab, ERAU</strong> <span class="cv-date">Jan 2025 ‒ Present</span><br/>
+    <em>Advised by Dr. Sergey Drakunov</em><br/>
+    ➤ Secured funding for developing an AI-powered powerplant diagnostic system on a Unitree Go2 quadruped.<br/>
+    ➤ Developed a ROS2 workspace for deploying RL policies, training the policies in custom Isaac Lab environments.<br/>
+    ➤ Wrote a search controller using time-varying probability distributions to locate anomalies.<br/>
+    ➤ Assisted in integration of Nav2 for autonomous 2D navigation using LiDAR and stereo cameras.<br/>
+    ➤ Built lab’s <a href="https://www.linkedin.com/company/eppl-erau-db" target="_blank">LinkedIn</a>, <a href="https://eppl.us" target="_blank">Website</a>, and <a href="https://github.com/eppl-erau-db" target="_blank">GitHub</a> for public outreach.<br/>
+  </p>
+
+  <p><strong>Undergraduate Research Intern, Physical Sciences Dept., ERAU</strong> <span class="cv-date">May 2023 ‒ Aug 2023</span><br/>
+    <em>Advised by Dr. John Hughes and Dr. Sergey Drakunov</em><br/>
+    ➤ Developed an autonomous omnidirectional vehicle with real-time AI object detection inference.<br/>
+    ➤ Authored and implemented a PID control system to capture free-falling objects using camera.<br/>
+    ➤ Designed and 3D-printed components for hardware integration.<br/>
+  </p>
+
+</div>
+
+<div class="cv-section">
+  <div class="cv-title">Industry Experience</div>
+  <div class="cv-divider"></div>
+
+  <p><strong>Mechanical Engineering Co-Op, Textron Systems</strong> <span class="cv-date">Sep 2023 ‒ Dec 2023</span><br/>
+    ➤ Developed 3D models in Siemens NX with GD&T for manufacturing for the Sentinel program.<br/>
+    ➤ Gained hands-on experience in ANSYS for static linear and nonlinear structural analysis.<br/>
+    ➤ Converted legacy 2D drawings into modern 3D models.<br/>
+  </p>
+
+</div>
+
+<div class="cv-section">
+  <div class="cv-title">Academic Projects</div>
+  <div class="cv-divider"></div>
+
+  <p><strong>Principal Investigator, VerdeCommute VC-1</strong> <span class="cv-date">Aug 2024 ‒ Present</span><br/>
+  <em>Aerospace Engineering Senior Design Project, Supervised by Prof. Kimberly Heinzer</em><br/>
+    ➤ Led the preliminary design phase of the VerdeCommute VC-1, a hybrid-electric STOL aircraft.<br/>
+    ➤ Developed MATLAB tools to optimize high-lift propeller design, placement, and thrust modeling.<br/>
+    ➤ Detaield systems integration of electric motors, batteries, and turbogenerator for hybrid propulsion.<br/>
+  </p>
+
+  <p><strong>Software & Communications Engineer, ToppleBot</strong> <span class="cv-date">Aug 2024 ‒ Present</span><br/>
+    <em>Engineering Physics Senior Design Project, Supervised by Dr. Aroh Barjatya</em><br/>
+    ➤ Developed software system for the ToppleBot, a reaction-wheel-driven balancing cube.<br/>
+    ➤ Implemented wireless communication with micro-ROS for real-time data exchange and contral station visualization.<br/>
+  </p>
+
+  <p><strong>Controls Engineer, Adjustable Throat Area De Laval Nozzle</strong> <span class="cv-date">Jan 2024 ‒ May 2024</span><br/>
+    <em>Engineering Physics Junior Design Project, Supervised by Dr. Sergey Drakunov</em><br/>
+    ➤ Created mathematical model of nozzle to control throat area for ideal aerodynamic conditions based on sensor input.<br/>
+    ➤ Constructed a 3D printed prototype to accelerate incoming subsonic flow to supersonic conditions.<br/>
+    ➤ Devised and executed various tests to quantify success, test hypotheses, and provide insight for improvements.<br/>
+  </p>
+
+  <p><strong>Software Engineer, Batted Baseball Trajectory Calculator</strong> <span class="cv-date">Aug 2024 ‒ Present</span><br/>
+    <em>Class Project, Supervised by Dr. Caroline Liron</em><br/>
+    ➤ Authored a MATLAB program capable of predicting and graphing the trajectory of a baseball given initial conditions.<br/>
+    ➤ Mastered commonly used computational and graphing capabilities of MATLAB to depict expected trajectory.<br/>
+  </p>
+
+</div>
+
+<div class="cv-section">
+  <div class="cv-title">Involvement and Leadership</div>
+  <div class="cv-divider"></div>
+
+  <p><strong>Academic Chair, Society of Hispanic Professional Engineers (SHPE)</strong> <span class="cv-date">May 2023 ‒ May 2024</span><br/>
+    ➤ Led educational research meetings, introducing members to research opportunities for undergraduates.<br/>
+    ➤ Planned and managed various events to provide supplementary instruction to members in MATLAB and 3D printing.<br/>
+  </p>
+
+  <p><strong>Mentee, Boeing Career Mentorship Program (BCP)</strong> <span class="cv-date">May 2022 ‒ Oct 2022</span><br/>
+    ➤ Fostered mentor-mentee relationships with Boeing employees through the BCP curriculum<br/>
+    ➤ Developed skills necessary to integrate into a professional environment like initiative, networking, and leadership<br/>
 </p>
 
-<h2>Research Experience</h2> 
-<p>
-  <em><strong>Undergraduate Research Intern, Physical Sciences Department, Embry-Riddle Aeronautical University, Daytona Beach, FL</strong></em><br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;January 2025 ‒ Present<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Research Advisor: Dr. Sergey Drakunov
-  <ul>
-    <li>Received $15,000 in funding for developing an autonomous, AI-powered system capable of conducting power plant diagnostics and reports using a Unitree Go2 EDU quadruped, added sensors, and Jetson devices.</li>
-    <li>Developed a ROS2 workspace for deploying low-level (locomotion) and high-level (navigation) control policies with Python and C++ packages, training all policies through massively parallel reinforcement learning with Isaac Lab.</li>
-    <li>Collaborated with team members to implement Nav2 using LiDAR and camera data, for autonomous 2D navigation.</li>
-    <li>Wrote a roughly random control algorithm for anomaly searching.</li>
-    <li>Created lab LinkedIn, Website, and GitHub Organization for project demonstration and public visibility.</li>
-  </ul>
-  <br/>
-  
-  <em><strong>Undergraduate Research Intern - Summer Employment, Physical Sciences Department, Embry-Riddle Aeronautical University, Daytona Beach, FL</strong></em><br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;May 2023 ‒ August 2023<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Research Advisors: Dr. John Hughes, Dr. Sergey Drakunov
-  <ul>
-    <li>Developed an autonomous, AI-powered, omnidirectional vehicle leveraging low-latency inference on the Jetson Nano and low-cost hardware.</li>
-    <li>Authored a PID control algorithm in Python to maneuver the vehicle based on input from the AI object detection system to successfully capture a free-falling object, solely using image data.</li>
-    <li>Conceived, modeled, and 3D printed various parts and mechanisms to house hardware and object capture systems</li>
-  </ul>
-</p>
+</div>
 
-<h2>Industry Experience</h2> 
-<p>
-  <em><strong>Mechanical Engineering Co-Op, Textron Systems, Wilmington, MA</strong></em><br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;September 2023 ‒ December 2023<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Supervisor: Allison Mustain
-  <ul>
-    <li>Developed detailed 3D models of mechanical components using Siemens NX, focusing on Product Manufacturing Information (PMI) and Geometric Dimensioning and Tolerancing (GD&T).</li>
-    <li>Strengthened proficiency in ANSYS through hands-on experience with linear static analysis. Gained exposure to nonlinear analysis, enhancing my understanding of material behavior under complex loads.</li>
-    <li>Transitioned legacy 2D drawings to modern 3D models, updating outdated specifications and integrating current engineering standards. Developed engineering intuition regarding material tolerances and welding practices.</li>
-  </ul>
-  <br/>
+<div class="cv-section">
+  <div class="cv-title">Technologies and Skills</div>
+  <div class="cv-divider"></div>
+  <p>
+    <strong>Proficient In:</strong> MATLAB, Simulink, Python, C/C++, ROS2, Micro-ROS, Git, Siemens NX, Inventor<br/>
+    <strong>Familiar With:</strong> Femap with NASTRAN, CATIA v5, STK, SolidWorks, Javascript, Isaac Gym, Nav2, Docker<br/>
+    <strong>Robotics Hardware:</strong> Unitree Go2, Jetson Nano/Orin/AGX<br/>
+  </p>
+</div>
 
-  <em><strong>Boeing Career Mentorship Program Mentee, The Boeing Company, Daytona Beach, FL</strong></em><br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;May 2022 ‒ November 2022<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Supervisor: Luis Velasquez
-  <ul>
-    <li>Participated in the Boeing Career Mentorship Program, enabled connections with multiple Boeing employees in interested fields.</li>
-    <li>Developed professional skills like conducting informational interviews, networking, and communicating effectively.</li>
-    <li>Deepened understanding of professional development and industry trends.</li>
-  </ul>
-</p>
+<div class="cv-section">
+  <div class="cv-title">Selected Honors & Awards</div>
+  <div class="cv-divider"></div>
+  <p>
+    ➤ Dean’s List, Embry-Riddle (All Semesters)<br/>
+    ➤ Diamond Eagle Scholarship (All Semesters)<br/>
+    ➤ Sunshine State Conference Commissioner’s Honor Roll (2021, 2022)<br/>
+  </p>
+</div>
 
-<h2>Academic Project Experience</h2> 
-<p>
-  <em><strong>Principal Investigator, Aerospace Engineering Senior Design, Embry-Riddle Aeronautical University,
-    Daytona Beach, FL</strong></em><br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;August 2024 ‒ Present<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Supervisor: Professor Kimberly Heinzer
-  <ul>
-    <li>Directed the conceptual and preliminary design of VerdeCommute VC-1, a hybrid-electric short take-off and landing (STOL) aircraft for regional air mobility markets.</li>
-    <li>Designed and implemented a MATLAB-based algorithm to optimize high-lift propeller sizing,placement, and thrust modeling, incorporating lift augmentation effects using a surrogate model developed by NASA’s SCEPTOR project.</li>
-    <li>Investigated systems integration of key components, including electric motors, turbogenerator, batteries, and motor controllers, to ensure optimal performance and compatibility.</li>
-  </ul>
-  <br/>
-
-  <em><strong>Software and Communications Engineer, Engineering Physics Senior Design, Embry-Riddle Aeronautical University, Daytona Beach, FL </strong></em><br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;August 2024 - Present<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Supervisor: Dr. Aroh Barjatya
-  <ul>
-    <li>Engineered software architecture for ToppleBot, an autonomous reaction-wheel-driven balancing cube, focusing on scalable control algorithms and user-friendly deployment.</li>
-    <li>Developed a wireless communications framework using micro-ROS to enable real-time communication between the onboard microcontroller and IMU and the control station.</li>
-    <li>Utilized RViz to display the cube’s current orientation for demonstration purposes.</li>
-  </ul>
-</p>
-
-<h2>Research Interests</h2> 
-<p>
-  <em><strong>Control Techniques:</strong></em>&nbsp;Developing control schemes that seamlessly transition from theory to real-time control implementation on robotic systems in dynamic environments. Interested in optimal control techniques such as model predictive control (MPC).<br/>
-  <em><strong>Embodied Artificial Intelligence (AI):</strong></em>&nbsp;Experienced in deploying low-latency, real-time AI inference for maximum performance of robotic systems.<br/>
-  <em><strong>Robotics Applications:</strong></em>&nbsp;Passionate about harnessing the utility of robotic systems to benefit society, allowing humans to automate repetitive but necessary tasks.<br/>
-</p>
-
-<h2>University Service</h2> 
-<p>
-  <em><strong>Academic Chair, Society of Hispanic Professional Engineers Las Aguilas Chapter, Daytona Beach, FL</strong></em><br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;May 2023 ‒ May 2024<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Supervisor: Maximus Mendez
-  <ul>
-    <li>Lead educational research meetings, introducing members to research opportunities for undergraduates.</li>
-    <li>Planned and managed various events to provide supplementary instruction to members in MATLAB and 3D printing.</li>
-  </ul>
-</p>
-
-<h2>Laboratory and Technical Skills</h2>
-<p class="indented">
-  ROS2, Linux, Inventor, Siemens NX, MATLAB, ANSYS, Femap, Python, Git, Simulink, CATIA v5, Unitree Go2, SolidWorks, C/C++ (intermediate proficiency), Nav2, Isaac Lab/Gym<br/>
-</p>
-
-<h2>Professional Memberships</h2> 
-<p>
-  &nbsp;&nbsp;&nbsp;&nbsp;Society of Hispanic Professional Engineers, April 2023 - Present<br/>
-</p>
-
-<h2>Selected Honors and Awards</h2> 
-<p>
-  &nbsp;&nbsp;&nbsp;&nbsp;Dean’s List, Embry-Riddle Aeronautical University, All Semesters<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Diamond Eagle Scholarship, Embry-Riddle Aeronautical University, All Semesters<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Scholar-Athlete Award, Embry-Riddle Aeronautical University, 2022<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;Sunshine State Conference Commissioner’s Honor Roll 2021, 2022<br/>
-</p>
+<div class="cv-section">
+  <div class="cv-title">Professional Memberships</div>
+  <div class="cv-divider"></div>
+  <p>➤ Society of Hispanic Professional Engineers (April 2023 - Present)</p>
+</div>
