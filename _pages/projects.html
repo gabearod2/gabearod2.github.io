@@ -7,23 +7,76 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.project_category %}
-  {% for category in site.project_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.projects %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-        {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-          {% assign title_shown = true %}
-        {% endunless %}
-        {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.projects reversed %}
-    {% include archive-single.html %}
+<!-- Ensure categories are ordered with "Professional" first -->
+{% assign category_order = "academic,personal" | split: "," %}
+
+{% for category_name in category_order %}
+  {% assign category = site.project_category[category_name] %}
+  {% if category %}
+    <h2>{{ category.title }}</h2>
+    <hr />
+    <div class="projects-container">
+      {% for post in site.projects %}
+        {% if post.category == category_name %}
+          <div class="project-item">
+            <div class="project-image">
+              <img src="{{ post.image }}" alt="{{ post.title }}">
+            </div>
+            <div class="project-info">
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.excerpt | strip_html }}</p>
+              <a href="{{ post.url }}" class="project-link">Read More</a>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
 {% endfor %}
-{% endif %}
+
+<style>
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .project-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .project-image img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #080808;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  .project-info {
+    flex-grow: 1;
+  }
+
+  .project-info h3 {
+    margin: 0;
+  }
+
+  .project-info p {
+    margin: 5px 0;
+  }
+
+  .project-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #52adc8;
+    font-weight: bold;
+  }
+</style>
