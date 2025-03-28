@@ -10,8 +10,12 @@ category: academic
 <h3>Summary</h3>
 
     <p>
-        As a part of the AMIGO project, I am currently heading the searching control algorithm's design. Previously, I have worked on the RL deployment, ROS functionalities, and support of rapid prototyping efforts. While this research project is loosely structured, allowing for exploration into my team's interests, our end goal is to develop an autonomous robotic platform for powerplant diagnostics. Our canvas is the Unitree Go2 EDU quadruped, where we have added a Jetson AGX Orin, 2D LiDAR, ZED X Camera, Raspberry Pi, and other equipment. With our additions, the robot can currently autonomously navigate in two dimensions, leveraging <a href="https://docs.nav2.org/" target="_blank">Nav2</a>. I have also successfully trained custom RL policies through <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, and deployed them with my <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">ROS2 deployment framework</a>.
+        As a part of the AMIGO project, I am currently heading the development of an anomaly searching control algorithm. Previously, I trained custom RL policies in <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, wrote a ROS2 based <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">RL deployment framework</a>, implemented additional ROS2 functionalities (services and SDK integration), and supported the rapid prototyping efforts. While this research project is loosely structured, the end goal is to develop an autonomous robotic platform for powerplant diagnostics. We have outfitted Unitree Go2 EDU quadruped with a Jetson AGX Orin, 2D LiDAR, ZED X Camera, Raspberry Pi, and other equipment. With our additions, the robot can currently autonomously navigate in two dimensions, leveraging our custom <a href="https://docs.nav2.org/" target="_blank">Nav2</a> implementation <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">amigo_ros2</a>. 
+    </p>
 
+    <!-- AMIGO Image, Centered -->
+    <p align="center">
+        <img src="/images/amigo.jpg" alt="AMIGO, Bryan, Jose, Gabriel" width="500"/>
     </p>
 
 <!-- Current Status and Media-->
@@ -21,10 +25,7 @@ category: academic
         One of the tasks I was given was to develop a locomotion controller to tackle the open-backed stairs found in many powerplants. While the controller is not fully operational, I have acquainted myself with RL training principles, Isaac Lab, Isaac Gym, and RL deployment in the process. As mentioned above, I developed a ROS2 deployment of the RL policies that is now being adapted to facilitate 3D navigational deployment with object avoidance for safety. While the ROS2 deployment worked for initial locomotion testing, I am now working on a deployment framework through Unitree's SDK, in order to minimize delays. The initial deployment of a high frequency hopping policy (to combat delays introduced by ROS bloat) is shown below.
     </p>
 
-    <!-- AMIGO Image, Centered -->
-    <p align="center">
-        <img src="/images/amigo.jpg" alt="The team, huddled around the AMIGO!" width="600"/>
-    </p>
+
 
     <!-- AMIGO Video, Centered -->
     <p align="center">
