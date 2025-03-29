@@ -11,9 +11,7 @@ Hello! My name is Gabriel Rodriguez and I am currently a student at [Embry-Riddl
 
 I expect to graduate in May of 2025, and will be joining [MIT's Lincoln Laboratory](https://www.ll.mit.edu/) as an intern in their [Controls and Autonomous Systems Group](https://www.ll.mit.edu/r-d/engineering/control-and-autonomous-systems-engineering) this upcoming summer. In the fall, I will be joining [Carnegie Mellon's Robotics Institute](https://www.ri.cmu.edu/), pursuing a Master's of Science in Robotics ([MSR](https://www.ri.cmu.edu/education/academic-programs/master-of-science-robotics/)).  
 
-I’m passionate about the integration of robots into society and I hope to contribute to innovations that make this integration smoother and more impactful. 
-
-Currently, I am preparing for graduate school, where I hope to explore the applications of control theory and machine learning in robotics. 
+I’m passionate about robots, and hope to apply classical and learning-based controls to enable their integration into society. 
 
 Right now, I’m involved in two exciting projects:
 - **AMIGO** at the [Engineering Physics Propulsion Lab (EPPL)](https://www.linkedin.com/company/eppl-erau-db), where I’m working on advanced autonomous robotic systems for powerplant diagnostics, training and deploying RL control policies, and room searching for anomalies.

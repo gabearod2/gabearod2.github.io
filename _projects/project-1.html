@@ -10,7 +10,9 @@ category: academic
 <h3>Summary</h3>
 
     <p>
-        As a part of the AMIGO project, I am currently heading the development of an anomaly searching control algorithm. Previously, I trained custom RL policies in <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, wrote a ROS2 based <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">RL deployment framework</a>, implemented additional ROS2 functionalities (services and SDK integration), and supported the rapid prototyping efforts. While this research project is loosely structured, the end goal is to develop an autonomous robotic platform for powerplant diagnostics. We have outfitted Unitree Go2 EDU quadruped with a Jetson AGX Orin, 2D LiDAR, ZED X Camera, Raspberry Pi, and other equipment. With our additions, the robot can currently autonomously navigate in two dimensions, leveraging our custom <a href="https://docs.nav2.org/" target="_blank">Nav2</a> implementation <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">amigo_ros2</a>. 
+        As a part of the AMIGO project, I am currently heading the development of an anomaly searching control algorithm. Previously, I trained custom RL policies in <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, wrote a ROS2 based <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">RL deployment framework</a>, implemented additional ROS2 functionalities (services and SDK integration), and supported our rapid prototyping efforts.<br/><br/>
+        
+        While this research project is loosely structured, the end goal is to develop an autonomous robotic platform for powerplant diagnostics. We have outfitted Unitree Go2 EDU quadruped with a Jetson AGX Orin, 2D LiDAR, ZED X Camera, Raspberry Pi, and other equipment. With our additions, the robot can currently autonomously navigate in two dimensions, leveraging our custom <a href="https://docs.nav2.org/" target="_blank">Nav2</a> implementation <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">amigo_ros2</a>. 
     </p>
 
     <!-- AMIGO Image, Centered -->
@@ -18,23 +20,31 @@ category: academic
         <img src="/images/amigo.jpg" alt="AMIGO, Bryan, Jose, Gabriel" width="500"/>
     </p>
 
-<!-- Current Status and Media-->
-<h3>Current Status</h3>
+<!-- RL Training and Deployment Story -->
+<h3>RL Training and Deployment</h3>
 
     <p>
-        One of the tasks I was given was to develop a locomotion controller to tackle the open-backed stairs found in many powerplants. While the controller is not fully operational, I have acquainted myself with RL training principles, Isaac Lab, Isaac Gym, and RL deployment in the process. As mentioned above, I developed a ROS2 deployment of the RL policies that is now being adapted to facilitate 3D navigational deployment with object avoidance for safety. While the ROS2 deployment worked for initial locomotion testing, I am now working on a deployment framework through Unitree's SDK, in order to minimize delays. The initial deployment of a high frequency hopping policy (to combat delays introduced by ROS bloat) is shown below.
+        Powerplants often exhibit difficult terrain for a quadruped to traverse. Specifically, most plants are littered with open-backed staircases that pose a great challenge for blind locomotion policies and controllers. Too often, the robot (especially smaller quadrupeds like the Go2) steps into the open region and falls face first into the stairs.<br/><br/>
+        
+        To tackle this issue, I acquainted myself with RL methods for robot locomotion. Starting from the basic Isaac Lab Go2 environment, I edited the reward structure, added privileged observations (for asymmetric Actor Critic NNs), implemented increased domain randomization, and abused my gaming laptop's GPU. To my surprise, once I had a policy that looked ~acceptable~ in the sim, I couldn't find a deployment framework for the Go2. So, I had to make my own and called it <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">go2_rl_ws</a>.<br/><br/>
+        
+        After a couple sketchy tests (where we hung the AMIGO up with paracord), it worked! Much to my disappointment though, the sim2real transfer wasn't exactly one to one... In fact, even with strenuous efforts in reward tuning, my policies reliably failed when deployed on the real robot. There are a few reasons why this was the case:<br/><br/>
+
+        ➤ Inconsistencies between the sim's motor models and those on the robot.<br/>
+        ➤ Delays induced by the ROS2 deployment.<br/>
+        ➤ Overfitting of the sim's simulated dynamics.<br/><br/>
+        
+        Here's what that looked like:
     </p>
 
-
-
-    <!-- AMIGO Video, Centered -->
+    <!-- AMIGO RL Deployment Video, Centered -->
     <p align="center">
         <iframe width="600" height="350" src="https://www.youtube.com/embed/54QndZJDfPw" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
 
-    <p>
+    <p>        
         This semester, our goal is tackle autonomous room searching. This will be an invaluable asset during real-world deployment, allowing us to find anomalies in dynamically changing environments. My current approach assigns a time-dependant probability distribution to the region of interest, while the robot determines the next target waypoint in a roughly random manner. The robot tends to the hiegher probability areas, while not forgetting about lower probability areas. More details and a testing video are coming soon!
     </p>
 
