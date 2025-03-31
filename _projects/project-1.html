@@ -21,7 +21,7 @@ category: academic
     </p>
 
 <!-- RL Training and Deployment Story -->
-<h3>RL Training and Deployment</h3>
+<h3>RL Locomotion Training and Deployment</h3>
 
     <p>
         Powerplants often exhibit difficult terrain for a quadruped to traverse. Specifically, most plants are littered with open-backed staircases that pose a great challenge for blind locomotion policies and controllers. Too often, the robot (especially smaller quadrupeds like the Go2) steps into the open region and falls face first into the stairs.<br/><br/>
@@ -34,8 +34,17 @@ category: academic
         ➤ Delays induced by the ROS2 deployment.<br/>
         ➤ Overfitting of the sim's simulated dynamics.<br/>
         ➤ Inadequate state estimation.<br/><br/>
-        
-        To combat these issues, I trained a high frequency hoppinh gait, and deployed it on the robot. Here's what that looked like:
+
+        In fact, since I did not develop state estimation algo, the following were the available observations for the policy:
+    </p>
+
+    <!-- RL Control Image, Centered -->
+    <p align="center">
+        <img src="/images/rl_control.jpg" alt="AMIGO, Bryan, Jose, Gabriel" width="100%"/>
+    </p>.
+    
+    <p>
+        Despite the shortcomings, however, I was able to train and deploy a high frequency hopping gait. Here's what that looked like:
     </p>
 
     <!-- AMIGO RL Deployment Video, Centered -->
@@ -48,11 +57,31 @@ category: academic
 <h3>Anomaly Searching</h3>
 
     <p>        
-        This semester, our goal is tackle autonomous room searching. This will be an invaluable asset during real-world deployment, allowing us to find anomalies in dynamically changing environments. My current approach assigns a time-dependant probability distribution to the region of interest, while the robot determines the next target waypoint in a roughly random manner. The robot tends to the higher probability areas, while not forgetting about lower probability areas. More details and a testing video are coming soon!
+        This semester, our goal is tackle autonomous room searching. This will be an invaluable asset during real-world deployment, allowing us to find anomalies in dynamically changing environments. My current approach assigns a time-dependant probability distribution to the region of interest, while the robot determines the next target waypoint in a roughly random manner. The idea is to "push" the AMIGO towards the higher probability areas, while not forgetting about lower probability areas.<br/><br/>
+
+        The probability distribution is currently updated as follows, all starting with a uniform distribution, \(p_{1}(x, y) = 0.5\).
+
+
+        $$
+        p_{t+1}(x, y) = p_t(x, y) + \alpha \left( \frac{\partial p}{\partial s} + \frac{\partial p}{\partial a} \right)
+        $$
+
+        where \(s\) is the robot position, and \(a\) are detected anomalies in the search area. 
+
+        $$
+        \frac{\partial p}{\partial s} = \frac{\min(p(x,y))}{\beta} \cdot \tanh \left( (r_{\text{cam}} \cdot s)^2 \right) - \frac{\min(p(x,y))}{\beta}
+        $$
+
+        $$
+        \frac{\partial p}{\partial a} = \sum_{i=1}^{N} \exp\left(-\frac{d_{\text{a}_i}}{r_a}\right)
+        $$
+
+        Determining the next action at each time step is the true crux of this controller and still under development. We are looking to integrate principles of RL, while being able to learn while deployed.
+
     </p>
 
 <!-- Attributions Section -->
 <h3>Attributions</h3>
     <p>
-        Funded by <a href="https://www.steamsolutions.com/" target="_blank">Steam Solutions</a>, and housed by the <a href="https://www.linkedin.com/company/eppl-erau-db" target="_blank">Engineering Physics Propulsion Lab @ ERAU</a>. Our custom implementation, mostly authored by my colleague, <a href="https://www.linkedin.com/in/jose-castelblanco-002640195/" target="_blank">Jose Castelblanco</a>, can be found <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">here</a>. 
+        Funded by <a href="https://www.steamsolutions.com/" target="_blank">Steam Solutions</a>, and housed by the <a href="https://www.linkedin.com/company/eppl-erau-db" target="_blank">Engineering Physics Propulsion Lab @ ERAU</a>. Our custom Nav2 implementation, mostly authored by my colleague, <a href="https://www.linkedin.com/in/jose-castelblanco-002640195/" target="_blank">Jose Castelblanco</a>, can be found <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">here</a>. 
     </p>
