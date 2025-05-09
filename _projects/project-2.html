@@ -10,41 +10,135 @@ category: academic
 <h3>Summary</h3>
 
     <p>
-        The ToppleBot project builds off of related momentum wheel cubes like <a href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, <a href="https://www.wevolver.com/specs/cubli" target="_blank">Cubli</a>, and <a href="https://github.com/remrc/Self-Balancing-Cube" target="_blank">REM-RC's Balancing Cube</a>. This project is in partial fullfillment of my Engineering Physics Bachelor's degree, serving as my senior design project. We have recently written out Conceptual Design Report, which can be found <a href="https://gabearod2.github.io/files/topplebot_codr.pdf" target="_blank">here</a>. As the software and communications engineer I am implementing a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I am sharpening my skills in C/C++, controls, and ROS2. My current project repos can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a> and <a href="https://github.com/gabearod2/topplebot_station" target="_blank">here</a>, with support for publishing IMU messages to ROS and visualizing orientation in RViz. 
+        The ToppleBot project builds off of related momentum wheel cubes like <a href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, <a href="https://www.wevolver.com/specs/cubli" target="_blank">Cubli</a>, and <a href="https://github.com/remrc/Self-Balancing-Cube" target="_blank">REM-RC's Balancing Cube</a>. This project served as my senior design projecy for my Engineering Physics Bachelor's degree. 
+    </p>
+
+    <p>
+        As the software and communications engineer I implementied a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I sharpened my skills in C/C++, controls, and ROS2. My current project repos can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a> and <a href="https://github.com/gabearod2/topplebot_station" target="_blank">here</a>, with support for publishing IMU messages to ROS and visualizing orientation in RViz. 
     </p>
 
 <!-- Current Status and Media-->
-<h3>Current Status</h3>
+<h3>Balancing Control and Visualization</h3>
 
     <p>
-        As mentioned, the ESP32 is publishing IMU messages to ROS, based on the readings from the onboard IMU, an MPU 9250. The control station then subscribes to this topic, interpreting the incoming information for integration into ROS's tf2 system. The control station then displays the current state of the ToppleBot using Rviz. Currently, I have established communication between the ESP32 and can display the orientation of our demo model. Here is a quick demo of my initial integration.
+        To accomodate the new software stack and IMU, I had to write my own controller. In the interest of time, a simple PID with low-pass filters on the error quaternion was developed and deployed on the hardware. After quite a bit of tuning, we got a pretty nice demonstration:
     </p>
 
     <!-- ToppleBot Initial Orientation Video, Centered -->
     <p align="center">
-        <iframe width="600" height="350" src="https://www.youtube.com/embed/PyNexkg9_SY" 
+        <iframe width="600" height="350" src="https://www.youtube.com/embed/5LkHNn3iz_Y" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
 
+<h3>Odometry System and Visualization</h3>
+
     <p>
-        Recently, I also got an odometry system up and running, based solely off of the IMU data. Modeling each corner of the cube as a node, I dynamically update their positions using the quaterion from the AHRS algorithm. Then, using the projected gravity vector, I determine which node is the "balancing node" which allows me to determine the translation from the previous balancing node to the current one. I can then determine the position of the model and it's orientation and display it through RViz. Initially the visualization updated slowly and often mispresented the system orientation. 
+        I also got an odometry system up and running, based solely off the IMU data. Modeling each corner of the cube as a node, I dynamically update their positions using the quaternion from the AHRS algorithm. Then, using the projected gravity vector, I determine which node is the "balancing node" which allows me to determine the translation from the previous balancing node to the current one. I can then determine the position of the model and it's orientation and display it through RViz. Initially the visualization updated slowly and often mispresented the system orientation. Through multi-threading I was able to combat the delays and get another nice demonstration.
     </p>
 
     <!-- ToppleBot Odometry Video, Centered -->
     <p align="center">
-        <iframe width="600" height="350" src="https://www.youtube.com/embed/oUXkUBIO_gA" 
+        <iframe width="600" height="350" src="https://www.youtube.com/embed/oSa1dvt7C_U" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
 
+<h3>Project Website</h3>
+
+    <p>
+        Refer to the project <a href="https://gabearod2.github.io/topplebot/" target="_blank">website</a> to create your own ToppleBot!
+    </p>
+<!--
     <p>
         To combat latency, I split the Micro-ROS publishing and AHRS alogirthm into two different FreeRTOS tasks. The fidelity of the visualization system was gretly improved as a result of this change. I still am working to play with the various frequency parameters, for publishing and updating the algorithm, but the following video shows the recently improved results.
     </p>
 
-    <!-- ToppleBot Odometry Video, Updated, Centered -->
+     ToppleBot Odometry Video, Updated, Centered 
     <p align="center">
         <iframe width="600" height="350" src="https://www.youtube.com/embed/AF9I7S65SIE" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
+
+ Current Status and Media
+<h3>Odometry System</h3>
+
+    <p>
+        We start by defining the node positions in the body-fixed frame \( \mathbf{p}_i^b \). Nodes \( i = 0 \) to \( 7 \) represent the ToppleBot's corners, and \( i = 8 \) represents the center (origin) of the body-fixed frame. These positions are parameterized by the cube's side length \( l \), which can be adjusted to support an arbitrary cube size.
+
+        During initialization, we acquire the first quaternion from the IMU, \( \mathbf{q}_{\text{init}} \), and compute its inverse as a correction factor:
+    
+        $$
+            \mathbf{q}_{\text{corr}} = \mathbf{q}_{\text{init}}^{-1}
+        $$
+    
+        All subsequent IMU quaternions are corrected using quaternion multiplication:
+    
+        $$
+            \mathbf{q}(t) = \mathbf{q}_{\text{corr}} \otimes \mathbf{q}_{\text{raw}}(t)
+        $$
+    
+        Node positions in the world frame are then computed using an active rotation via the quaternion-derived rotation matrix:
+    
+        $$
+            \mathbf{p}_i^w = R(\mathbf{q}(t)) \cdot \mathbf{p}_i^b
+        $$
+
+        The "balancing node", the one determined to be touching the earth's \(xy\) plane, can be determined using it's difference from \(\mathbf{g}_{\text{dir}}\) in the world frame. First, we find the normalized vectors from the body-fixed origin to the node positions in the world frame:
+
+        $$
+            \mathbf{u}_i = \frac{\mathbf{p}_i^w - \mathbf{p}_8^w}{\left\| \mathbf{p}_i^w - \mathbf{p}_8^w \right\|}
+        $$
+
+        We know that in the world frame, gravity points straight down:
+        
+        $$
+            \mathbf{g}_{\text{dir}} = \begin{bmatrix} 0 \\ 0 \\ -1 \end{bmatrix}
+        $$
+
+        Our balancing node is then determined as follows: 
+        
+        $$
+            i_{\text{balance}} = \arg\min_i \left\| \mathbf{u}_i - \mathbf{g}_{\text{dir}} \right\|
+        $$
+
+        Once the balancing node index \( i_{\text{balance}} \) is identified, we compute two key translations:
+
+        <ul>
+            <li>\( \mathbf{p}_{\text{bl}} \): the position of the body-fixed frame origin (node 8) relative to the balancing node in the world frame.</li> 
+            <li>\( \mathbf{p}_{\text{bn}} \): the cumulative displacement of the balancing node in the world frame.</li> 
+        </ul>
+
+        If the balancing node changes from the previous time step, we calculate its displacement:
+
+        $$
+            \Delta \mathbf{p}_{\text{bn}} = \mathbf{p}_{i_{\text{balance}}}^w - \mathbf{p}_{i_{\text{last}}}^w
+        $$
+
+        and update the global position of the balancing node:
+
+        $$
+            \mathbf{p}_{\text{bn}}(t) = \mathbf{p}_{\text{bn}}(t-1) + \Delta \mathbf{p}_{\text{bn}}
+        $$
+
+        The translation from the balancing node to the base link (node 8) is given by:
+
+        $$
+            \mathbf{p}_{\text{bl}} = \mathbf{p}_8^w - \mathbf{p}_{i_{\text{balance}}}^w
+        $$
+
+        Finally, two transforms are broadcast:
+
+        $$
+            T_{\text{base\_link}}^{\text{balancing\_node}} = \left( \mathbf{p}_{\text{bl}},\ \mathbf{q}(t) \right)
+        $$
+
+        $$
+            T_{\text{balancing\_node}}^{\text{world}} = \left( \mathbf{p}_{\text{bn}},\ \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix} \right)
+        $$
+
+        These transforms enable visualization and odometry within RViz, where the robot's orientation and position are expressed with respect to the world frame via the dynamically selected balancing node.
+
+    </p>
+    -->

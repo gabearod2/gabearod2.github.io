@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Gabriel Rodriguez"
 title_separator          : "-"
 name                     : &name "Gabriel Rodriguez"
-description              : &description "A doer focused on robotics, embodied AI, autonomous systems, and control."
+description              : &description "A doer focused on robotics and control."
 url                      : https://gabearod2.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "gabearod2/gabearod2.github.io"
@@ -21,10 +21,10 @@ repository               : "gabearod2/gabearod2.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Headshot.jpg"
+  avatar           : "Headshot_2.jpg"
   name             : "Gabriel Rodriguez"
   pronouns         : # example: "she/her"  
-  bio              : "A doer focused on robotics, embodied AI, autonomous systems, and control."
+  bio              : "A doer focused on robotics and control."
   location         : "Miami, FL"
   employer         : "ERAU"
   uri              : # URL
