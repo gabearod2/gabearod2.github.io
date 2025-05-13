@@ -6,32 +6,64 @@ collection: projects
 category: academic
 ---
 
-<!-- Heading and Summary Alt + Z-->
+<!-- Project Websites -->
+<h3>Project Website</h3>
+
+    <p>
+        Refer to the project <a href="https://gabearod2.github.io/topplebot/" target="_blank">website</a> to create your own ToppleBot!
+    </p>
+
+<!-- Summary -->
 <h3>Summary</h3>
 
     <p>
-        The ToppleBot project builds off of related momentum wheel cubes like <a href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, <a href="https://www.wevolver.com/specs/cubli" target="_blank">Cubli</a>, and <a href="https://github.com/remrc/Self-Balancing-Cube" target="_blank">REM-RC's Balancing Cube</a>. This project served as my senior design projecy for my Engineering Physics Bachelor's degree. 
+        The ToppleBot project builds off of related momentum wheel cubes like <a href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, <a href="https://www.wevolver.com/specs/cubli" target="_blank">Cubli</a>, and <a href="https://github.com/remrc/Self-Balancing-Cube" target="_blank">REM-RC's Balancing Cube</a>. This project served as my senior design project for my Engineering Physics Bachelor's degree. 
     </p>
 
     <p>
-        As the software and communications engineer I implementied a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I sharpened my skills in C/C++, controls, and ROS2. My current project repos can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a> and <a href="https://github.com/gabearod2/topplebot_station" target="_blank">here</a>, with support for publishing IMU messages to ROS and visualizing orientation in RViz. 
+        As the software and communications engineer I implemented a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I sharpened my skills in C/C++, controls, and ROS2. My current project repos can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a> and <a href="https://github.com/gabearod2/topplebot_station" target="_blank">here</a>, with support for publishing IMU messages to ROS and visualizing orientation in RViz. 
     </p>
 
-<!-- Current Status and Media-->
-<h3>Balancing Control and Visualization</h3>
+<!-- Balancing Control and Demonstration -->
+<h3>Balancing Control and Demonstration</h3>
 
     <p>
-        To accomodate the new software stack and IMU, I had to write my own controller. In the interest of time, a simple PID with low-pass filters on the error quaternion was developed and deployed on the hardware. After quite a bit of tuning, we got a pretty nice demonstration:
+        Even with the prior senior design team's hardware, with the addition of micro-ROS, the new IMU, and the AHRS algo, I had to rewrite the PID controller to work for our updated system. In the balancing configuration, the user sets the desired balancing point upon initialization of the controller (~ 5 seconds after system boot-up). The desired balancing point is defined as the quaternion representation of the balancing point orientation, \(\mathbf{q}_{\text{des}}=\mathbf{q}_{\text{init}}\). To find the orientational error from the desired balancng point, the following quaternionic relation is utilized:
+
+        $$
+            \mathbf{q}_{\text{err},k} = \mathbf{q}_{\text{des}}^{-1} \otimes \mathbf{q}_{k}
+        $$
+
+        Using a small-angle approximation (safe for balancing purposes) of the error quaternion, the roll, pitch, and yaw errors are defined using the following relation:
+
+        $$
+            \mathbf{q}_{\text{err},k} = \left[ \frac{\phi_{\text{err,k}}}{2}, \frac{\theta_{\text{err,k}}}{2}, \frac{\psi_{\text{err,k}}}{2}, 1 \right]
+        $$
+        
+        To aid with damping, the controller used the gyroscopic values to avoid differentiation of the system error. The raw values were extremely noisy, so I implemented a lightweight low-pass filter:
+
+        $$
+            \mathbf{\omega}_{k} = \alpha \mathbf{\omega}_{\text{raw},k} + (1 - \alpha) \mathbf{\omega}_{k-1}
+        $$
+
+        With the error fully defined, and assuming independant axis control, the speed to mantain balancing can be designed using the classic PID control, as defined below, where motor 1 is assumed to have control over the x-axis.
+
+        $$
+            u_{1,k} = k_p \phi_{\text{err},k} + k_i \sum_{i=0}^{k} \phi_{\text{err},k} + k_d \omega_{x,k}
+        $$
+
+        After a "considerable" amount of tuning, the following balancing capabilities are achieved (video below). I went for this model-free approach due to the limited time for control development. When first designing this controller, I felt I didn't have time to disassemble the cube, obtain reasonable system parameters, develop the mathematical model, AND implement a successful controller. Yet, with the amount of tuning I ended up having to do, it would have been better to just go through the initial headache and have the incredible advantages of a reasonale system model. Definitely a lesson I will take with me into future projects (or even the extension of this one).
     </p>
 
-    <!-- ToppleBot Initial Orientation Video, Centered -->
+    <!-- ToppleBot Corner Balancing Video, Centered -->
     <p align="center">
         <iframe width="600" height="350" src="https://www.youtube.com/embed/5LkHNn3iz_Y" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
 
-<h3>Odometry System and Visualization</h3>
+    <!-- Odometry System and Demonstration -->
+<h3>Odometry System and Demonstration</h3>
 
     <p>
         I also got an odometry system up and running, based solely off the IMU data. Modeling each corner of the cube as a node, I dynamically update their positions using the quaternion from the AHRS algorithm. Then, using the projected gravity vector, I determine which node is the "balancing node" which allows me to determine the translation from the previous balancing node to the current one. I can then determine the position of the model and it's orientation and display it through RViz. Initially the visualization updated slowly and often mispresented the system orientation. Through multi-threading I was able to combat the delays and get another nice demonstration.
@@ -44,11 +76,7 @@ category: academic
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
 
-<h3>Project Website</h3>
 
-    <p>
-        Refer to the project <a href="https://gabearod2.github.io/topplebot/" target="_blank">website</a> to create your own ToppleBot!
-    </p>
 <!--
     <p>
         To combat latency, I split the Micro-ROS publishing and AHRS alogirthm into two different FreeRTOS tasks. The fidelity of the visualization system was gretly improved as a result of this change. I still am working to play with the various frequency parameters, for publishing and updating the algorithm, but the following video shows the recently improved results.

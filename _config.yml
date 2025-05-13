@@ -85,9 +85,11 @@ publication_category:
 # Project Category - The following the list of project categories and their headings
 project_category:
   academic:
-    title: 'Academic'
+    title: 'Course and Capstone Projects'
+  eppl:
+    title: 'Engineering Physics Propulsion Lab Projects'
   personal:
-    title: 'Personal'
+    title: 'Personal Projects'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"

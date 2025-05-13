@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 <!-- Ensure categories are ordered with "Professional" first -->
-{% assign category_order = "academic,personal" | split: "," %}
+{% assign category_order = "eppl,academic,personal" | split: "," %}
 
 {% for category_name in category_order %}
   {% assign category = site.project_category[category_name] %}
