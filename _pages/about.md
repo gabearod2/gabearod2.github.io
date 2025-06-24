@@ -19,7 +19,7 @@ You can find more information about my projects [here](https://gabearod2.github.
   <img src="images/amigo_surgery.jpg" alt="AMIGO Surgery" style="width: 33.33%; height: auto; border-radius: 8px; object-fit: cover; border: 1px solid black;">
 </div>
 
-<div style="display: flex; justify-content: space-between; gap: 10px; width: 100%; box-sizing: border-box; margin-top: 10px;">
+<div style="display: flex; gap: 10px; width: 100%; box-sizing: border-box; margin-top: 10px;">
   <img src="images/quad_control.jpg" alt="Cascaded Control" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; border: 1px solid black;">
 </div>
 
