@@ -4,9 +4,19 @@ title: "My Classes"
 permalink: /classes/
 author_profile: true
 ---
-[Unofficial Transcript](https://gabearod2.github.io/files/unofficial_transcript_spring_2025.pdf)
+[Embry-Riddle Unofficial Transcript](https://gabearod2.github.io/files/unofficial_transcript_spring_2025.pdf)
 
-## Spring 2025 (Current Classes)
+
+## Fall 2025
+* ### Mechanics of Manipulation
+
+Mechanics of Manipulation is a graduate level course that dives into the fundamentals of robotic manipulation. Through this course you will learn the kinematics, statics, and dynamics of robotic manipulators as they interact with the world to accomplish tasks. You will gain experience with the intelligent use of kinematic constraint, gravity, and frictional forces. Additional topics include rigid body mechanics, automatic planning based on mechanics, deformable manipulation, and simulation of dynamic manipulation. Applications of robotic manipulation are drawn from physical human-robot interaction, manufacturing, and other domains.
+
+* ### Math Fundamentals for Robotics
+
+This course covers selected topics in applied mathematics useful in robotics, taken from the following list: 1. Solution of Linear Equations. 2. Polynomial Interpolation and Approximation. 3. Solution of Nonlinear Equations. 4. Roots of Polynomials, Resultants. 5. Approximation by Orthogonal Functions (includes Fourier series). 6. Integration of Ordinary Differential Equations. 7. Optimization. 8. Calculus of Variations (with applications to Mechanics). 9. Probability and Stochastic Processes (Markov chains). 10. Computational Geometry. 11. Differential Geometry.
+
+## Spring 2025 
 * ### Aircraft Detail Design
 
 Detail design of aircraft, which may include component part or test article design. Design of an aircraft or test article from the general layout to the design of its detail parts and necessary tools.
