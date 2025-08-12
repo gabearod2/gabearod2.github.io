@@ -10,9 +10,9 @@ category: eppl
 <h3>Summary</h3>
 
     <p>
-        As a part of the AMIGO project, I am currently heading the development of an anomaly searching control algorithm. Previously, I trained custom RL policies in <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, wrote a ROS2 based <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">RL deployment framework</a>, implemented additional ROS2 functionalities (services and SDK integration), and supported our rapid prototyping efforts.<br/><br/>
+        As a part of the AMIGO project, I developed an anomaly searching control algorithm, trained custom RL policies in <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, wrote a ROS2 based <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">RL deployment framework</a>, implemented additional ROS2 functionalities (services and SDK integration), and supported our rapid prototyping efforts.<br/><br/>
         
-        While this research project is loosely structured, the end goal is to develop an autonomous robotic platform for powerplant diagnostics. We have outfitted Unitree Go2 EDU quadruped with a Jetson AGX Orin, 2D LiDAR, ZED X Camera, Raspberry Pi, and other equipment. With our additions, the robot can currently autonomously navigate in two dimensions, leveraging our custom <a href="https://docs.nav2.org/" target="_blank">Nav2</a> implementation <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">amigo_ros2</a>. 
+        While this research project was loosely structured (and still on-going), the end goal was to develop an autonomous robotic platform for powerplant diagnostics. We outfitted the Unitree Go2 EDU quadruped with a Jetson AGX Orin, 2D LiDAR, ZED X Camera, Raspberry Pi, and other equipment. With our additions, the robot could currently autonomously navigate indoors, leveraging our custom <a href="https://docs.nav2.org/" target="_blank">Nav2</a> implementation <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">amigo_ros2</a>. The team at EPPL are currently adding outdoor (GPS) functionality. 
     </p>
 
     <!-- AMIGO Image, Centered -->
@@ -31,11 +31,11 @@ category: eppl
         After a couple sketchy tests (where we hung the AMIGO up with paracord), it worked! Much to my disappointment though, the sim2real transfer wasn't exactly one to one... In fact, even with strenuous efforts in reward tuning, my policies reliably failed when deployed on the real robot. There are a few reasons why this was the case:<br/><br/>
 
         ➤ Inconsistencies between the sim's motor models and those on the robot<br/>
-        ➤ Delays induced by the ROS2 deployment<br/>
-        ➤ Overfitting of the sim's simulated dynamics<br/>
-        ➤ Inadequate state estimation<br/><br/>
+        ➤ Inconsistent frequencies induced by the ROS2 deployment<br/>
+        ➤ PD gain mismatches induced by the ROS2 deployment<br/>
+        ➤ Overfitting of the sim's simulated dynamics<br/><br/>
 
-        In fact, since I did not develop extended state estimation algo, the following were the available observations for the policy:
+        Using the blind locomotion standard, the following observations were used for the policy:
     </p>
 
     <!-- RL Control Image, Centered -->

@@ -28,7 +28,7 @@ category: academic
 <h3>Balancing Control and Demonstration</h3>
 
     <p>
-        Even with the prior senior design team's hardware, with the addition of micro-ROS, the new IMU, and the AHRS algo, I had to rewrite the PID controller to work for our updated system. In the balancing configuration, the user sets the desired balancing point upon initialization of the controller (~ 5 seconds after system boot-up). The desired balancing point is defined as the quaternion representation of the balancing point orientation, \(\mathbf{q}_{\text{des}}=\mathbf{q}_{\text{init}}\). To find the orientational error from the desired balancng point, the following quaternionic relation is utilized:
+        Even with the prior senior design team's hardware, with the addition of micro-ROS, the new IMU, and the AHRS algo, I had to rewrite the PID controller to work for our updated system. In the balancing configuration, the user sets the desired balancing point upon initialization of the controller (~ 5 seconds after system boot-up). The desired balancing point is defined as the quaternion representation of the balancing point orientation, \(\mathbf{q}_{\text{des}}=\mathbf{q}_{\text{init}}\). To find the orientational error from the desired balancing point, the following quaternionic relation is utilized:
 
         $$
             \mathbf{q}_{\text{err},k} = \mathbf{q}_{\text{des}}^{-1} \otimes \mathbf{q}_{k}
@@ -46,7 +46,7 @@ category: academic
             \mathbf{\omega}_{k} = \alpha \mathbf{\omega}_{\text{raw},k} + (1 - \alpha) \mathbf{\omega}_{k-1}
         $$
 
-        With the error fully defined, and assuming independant axis control, the speed to mantain balancing can be designed using the classic PID control, as defined below, where motor 1 is assumed to have control over the x-axis.
+        With the error fully defined, and assuming independant axis control, the speed to mantain balancing can be designed using the classic PID control. Where motor 1 is assumed to have control over the x-axis.
 
         $$
             u_{1,k} = k_p \phi_{\text{err},k} + k_i \sum_{i=0}^{k} \phi_{\text{err},k} + k_d \omega_{x,k}

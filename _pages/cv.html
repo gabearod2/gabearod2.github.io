@@ -24,84 +24,84 @@ redirect_from:
   .cv-date, .cv-gpa {
       float: right;
   }
-  .cv-content {
-      margin-left: 15px;
-  }
   .cv-divider {
       border-top: 2px solid #4d4d4d;
       margin: 0px 0;
   }
+  .cv-indent {
+      margin-left: 2em;
+      margin-top: 0;    /* remove top margin */
+      margin-bottom: 0; /* remove bottom margin */
+  }
 </style>
-
-<p>
-  Download my <a href="https://gabearod2.github.io/files/resume.pdf" target="_blank">one-page resume</a> and my <a href="https://gabearod2.github.io/files/cv.pdf" target="_blank">full CV</a> (updated January 2025).
-</p>
 
 <div class="cv-section">
   <div class="cv-title">Research Interests</div>
   <div class="cv-divider"></div>
-
   <p>
-    <strong>Control Techniques:</strong> Model-based control and optimization for real-time implementation on robots.<br/>
-    <strong>Embodied AI:</strong> Low-latency AI inference for robotic autonomy and thinking.<br/>
-    <strong>Robotics Applications:</strong> Controlling robots to perform real-world tasks safely and effectively.<br/>
+    <strong>Learning and Control:</strong> Integration of model-based control techniques and intuition with learning-based methods.<br/>
+    <strong>Hardware-Aware Implementation:</strong> Low-latency programming techniques for real-time robot control.<br/>
+    <strong>Safety-Critical Systems:</strong> Ensuring safe and reliable robot operation in real-world environments.<br/>
   </p>
-
 </div>
 
 <div class="cv-section">
   <div class="cv-title">Education</div>
   <div class="cv-divider"></div>
-
-  <p><strong>Embry-Riddle Aeronautical University, Daytona Beach, FL</strong> <span class="cv-date">Aug 2020 - May 2025</span><br/>
-  B.S. Aerospace Engineering (Aeronautics) | B.S. Engineering Physics (Spacecraft Systems) <span class="cv-gpa">GPA: 3.96/4.00</span> <br/>
-  Minor in Applied Mathematics | Varsity Baseball (2020-2022) <span class="cv-gpa">Summa Cum Laude</span><br/>
+  <p><strong>Carnegie Mellon University, Pittsburgh, PA</strong> <span class="cv-date">Aug 2025 - Exp. Aug 2027</span><br/>
+    <span class="cv-indent">M.S. Robotics <span class="cv-gpa">GPA: ~ /4.00</span></span>
   </p>
-
+  <p><strong>Embry-Riddle Aeronautical University, Daytona Beach, FL</strong> <span class="cv-date">Aug 2020 - May 2025</span><br/>
+    <span class="cv-indent">B.S. Aerospace Engineering (Aeronautics Track) <span class="cv-gpa">GPA: 3.96/4.00</span></span><br/>
+    <span class="cv-indent">B.S. Engineering Physics (Spacecraft Systems Track) <span class="cv-gpa">Summa Cum Laude</span></span><br/>
+    <span class="cv-indent">Minor: Applied Mathematics</span>
+  </p>
 </div>
 
 <div class="cv-section">
   <div class="cv-title">Research Experience</div>
   <div class="cv-divider"></div>
 
-  <p><strong>Summer Research Program Intern, Control & Autonomous Systems, MIT Lincoln Laboratory</strong> <span class="cv-date">May 2025 ‒ Present</span><br/>
+  <p><strong>Visiting Researcher, Control & Autonomous Systems, MIT Lincoln Laboratory</strong> <span class="cv-date">May 2025 ‒ Aug 2025</span><br/>
     <em>Advised by Navid Shahrestani</em><br/>
-    ➤ Investigating the use of event cameras for robotic control.<br/>
-    ➤ Researching and exploring topics in robotic systems for defense applications.<br/>
-  </p>
- 
-  <p><strong>Undergraduate Research Intern, Engineering Physics Propulsion Lab, ERAU</strong> <span class="cv-date">Jan 2025 ‒ May 2025</span><br/>
-    <em>Advised by Dr. Sergey Drakunov</em><br/>
-    ➤ Secured funding for developing an AI-powered powerplant diagnostic system on a Unitree Go2 quadruped.<br/>
-    ➤ Developed a ROS2 workspace for deploying RL policies, training them in custom Isaac Lab environments.<br/>
-    ➤ Authored an anomaly search controller using time-varying probability distributions based on sensor input.<br/>
-    ➤ Assisted in integration of Nav2 for autonomous 2D navigation using LiDAR and stereo cameras.<br/>
-    ➤ Built and maintained lab’s <a href="https://www.linkedin.com/company/eppl-erau-db" target="_blank">LinkedIn</a>, <a href="https://eppl.us" target="_blank">Website</a>, and <a href="https://github.com/eppl-erau-db" target="_blank">GitHub</a> for public outreach, recruitment, and organization.<br/>
+    ➤ Programmed a GPU-accelerated Isaac Sim extension for event camera simulation and synthetic data generation (code coming soon!).<br/>
+    ➤ Created a motion primitive-based control algorithm for dynamic robotic navigation through cluttered environments.<br/>
+    <span class="cv-indent"><em>Tools:</em> Python, PyCUDA, Docker, Isaac Sim, Control Theory</span>
   </p>
 
-  <p><strong>Undergraduate Research Intern, Physical Sciences Dept., ERAU</strong> <span class="cv-date">May 2023 ‒ Aug 2023</span><br/>
+  <p><strong>Undergraduate Researcher, Engineering Physics Propulsion Lab, ERAU</strong> <span class="cv-date">Jan 2024 ‒ May 2025</span><br/>
     <em>Advised by Dr. Sergey Drakunov</em><br/>
+    ➤ Developed ROS2 workspace to deploy RL policies on a Unitree Go2, training them in custom Isaac Lab environments.<br/>
+    ➤ Authored an anomaly search controller using time-varying probability distributions based on sensor input.<br/>
+    ➤ Assisted in integration of Nav2 for autonomous 2D navigation using LiDAR and stereo cameras.<br/>
+    ➤ Built and maintained lab’s <a href="https://www.linkedin.com/company/eppl-erau-db" target="_blank">LinkedIn</a>, <a href="https://eppl.us" target="_blank">Website</a>, and <a href="https://github.com/eppl-erau-db" target="_blank">GitHub</a>.<br/>
+    <span class="cv-indent"><em>Repositories:</em> <a href="https://github.com/eppl-erau-db/go2_rl_ws">eppl-erau-db/go2_rl_ws</a>, <a href="https://github.com/eppl-erau-db/amigo_ros2">eppl-erau-db/amigo_ros2</a>, <a href="https://github.com/gabearod2/IsaacLab">gabearod2/IsaacLab</a></span><br/>
+    <span class="cv-indent"><em>Tools:</em> Python, C/C++, ROS2, Jetson AGX Orin, Raspberry Pi</span>
+  </p>
+
+  <p><strong>Undergraduate Researcher, Physical Sciences Dept., ERAU</strong> <span class="cv-date">May 2023 ‒ Aug 2023</span><br/>
+    <em>Advised by Dr. Sergey Drakunov and Dr. John Hughes</em><br/>
     ➤ Constructed an autonomous, mecanum-wheeled, omnidirectional vehicle with real-time AI object detection inference.<br/>
     ➤ Authored and implemented a PID control system to capture free-falling objects using camera inputs.<br/>
     ➤ Designed and 3D printed components for hardware and systems integration.<br/>
+    <span class="cv-indent"><em>Tools:</em> Python, Jetson Devices, Control Theory</span>
   </p>
-
 </div>
 
 <div class="cv-section">
-  <div class="cv-title">Industry Experience</div>
+  <div class="cv-title">Professional Experience</div>
   <div class="cv-divider"></div>
 
   <p><strong>Mechanical Engineering Co-Op, Textron Systems</strong> <span class="cv-date">Sep 2023 ‒ Dec 2023</span><br/>
     ➤ Devised testing mechanisms in Siemens NX with GD&T and PMI for the Sentinel (GBSD) program.<br/>
-    ➤ Conducted static linear and nonlinear structural analysis in ANSYS for various load cases on the testing mechanism.<br/>
-    ➤ Converted legacy 2D drawings into modern 3D models, updating outdated specifications to current standards.<br/>
+    ➤ Conducted static linear and nonlinear structural analysis in ANSYS.<br/>
+    <span class="cv-indent"><em>Tools:</em> Siemens NX, GD&T, ANSYS, PMI</span>
   </p>
 
-  <p><strong>Mentee, Boeing Career Mentorship Program (BCP)</strong> <span class="cv-date">May 2022 ‒ Oct 2022</span><br/>
+  <p><strong>Mentee, Boeing Career Mentorship Program (BCP)</strong> <span class="cv-date">May 2022 ‒ Nov 2022</span><br/>
     ➤ Fostered mentor-mentee relationships with Boeing employees through the BCP curriculum.<br/>
-    ➤ Developed skills necessary to integrate into a professional environment like initiative, networking, and leadership.<br/>
-
+    ➤ Developed skills necessary to integrate into a professional environment like initiative, networking, and leadership.
+  </p>
 </div>
 
 <div class="cv-section">
@@ -109,31 +109,32 @@ redirect_from:
   <div class="cv-divider"></div>
 
   <p><strong>Software & Communications Engineer, ToppleBot</strong> <span class="cv-date">Aug 2024 ‒ May 2025</span><br/>
-    <em>Engineering Physics Senior Design Project, Supervised by Dr. Aroh Barjatya</em><br/>
     ➤ Developed the software system for the ToppleBot, a reaction wheel-driven balancing and toppling cube robot.<br/>
-    ➤ Implemented wireless communication with micro-ROS over WiFi for real-time data exchange and control station visualization.<br/>
+    ➤ Implemented wireless communication with micro-ROS over WiFi for real-time data exchange and visualization.<br/>
+    ➤ Created, deployed, and tuned a model-free PID controller for balancing and toppling behaviors.<br/>
+    <span class="cv-indent"><em>Repositories:</em> <a href="https://github.com/gabearod2/topplebot">gabearod2/topplebot</a>, <a href="https://github.com/gbaearod2/topplebot_station">gabearod2/topplebot_station</a></span><br/>
+    <span class="cv-indent"><em>Tools:</em> Python, C/C++, ROS2, micro-ROS, FreeRTOS, ESP32</span>
   </p>
 
-
   <p><strong>Principal Investigator, VerdeCommute VC-1</strong> <span class="cv-date">Aug 2024 ‒ Dec 2024</span><br/>
-    <em>Aerospace Engineering Senior Design Project, Supervised by Prof. Kimberly Heinzer</em><br/>
     ➤ Led the preliminary design phase of the VerdeCommute VC-1, a hybrid-electric STOL aircraft.<br/>
     ➤ Developed MATLAB scripts to optimize high-lift propeller design, positioning, and thrust modeling.<br/>
     ➤ Defined the systems integration of electric motors, batteries, and VerdeGo turbo-generator for hybrid propulsion.<br/>
+    <span class="cv-indent"><em>Repositories:</em> <a href="https://github.com/gabearod2/hlp_design">gabearod2/hlp_design</a></span><br/>
+    <span class="cv-indent"><em>Tools:</em> MATLAB, MS Excel</span>
   </p>
 
-  <p><strong>Controls Engineer, Adjustable Throat Area De Laval Nozzle</strong> <span class="cv-date">Jan 2024 ‒ May 2024</span><br/>
-    <em>Engineering Physics Junior Design Project, Supervised by Dr. Sergey Drakunov</em><br/>
+  <p><strong>Controls Engineer, Adjustable Throat Area De Laval Nozzle</strong> <span class="cv-date">Jan 2023 ‒ May 2023</span><br/>
     ➤ Created a mathematical model to control the nozzle’s throat area for optimal aerodynamic performance.<br/>
-    ➤ Fabricated a 3D-printed prototype using PLA and TPU, integrating a pitot-static probe to validate system performance.<br/>
-</p>
-
-  <p><strong>Software Engineer, Batted Baseball Trajectory Calculator</strong> <span class="cv-date">Aug 2020 ‒ Dec 2020</span><br/>
-    <em>Class Project, Supervised by Dr. Caroline Liron</em><br/>
-    ➤ Authored a MATLAB script capable of predicting and graphing the trajectory of a baseball given initial conditions, based on "The Physics of Baseball" by Dr. Alan M. Nathan.<br/>
-    ➤ Mastered commonly used computational and graphing capabilities of MATLAB to depict expected trajectory.<br/>
+    ➤ Fabricated a 3D-printed prototype integrating a pitot-static probe for validation.<br/>
+    <span class="cv-indent"><em>Tools:</em> MATLAB, Inventor</span>
   </p>
 
+  <p><strong>Software Engineer, Batted Baseball Trajectory Calculator</strong> <span class="cv-date">Sep 2020 ‒ Dec 2020</span><br/>
+    ➤ Authored a MATLAB script to predict and graph the trajectory of a baseball given initial conditions.<br/>
+    ➤ Based on "The Physics of Baseball" by Dr. Alan M. Nathan.<br/>
+    <span class="cv-indent"><em>Tools:</em> MATLAB</span>
+  </p>
 </div>
 
 <div class="cv-section">
@@ -141,22 +142,21 @@ redirect_from:
   <div class="cv-divider"></div>
 
   <p><strong>Academic Chair, Society of Hispanic Professional Engineers (SHPE)</strong> <span class="cv-date">May 2023 ‒ May 2024</span><br/>
-    ➤ Established a research initiative to engage Hispanic undergraduate engineers in research opportunities.<br/>
-    ➤ Planned and managed various events to provide supplementary instruction to members in MATLAB and 3D printing.<br/>
+    ➤ Led educational research meetings, introducing members to research opportunities for undergraduates.<br/>
+    ➤ Planned and managed events to provide supplementary instruction in MATLAB and 3D printing.<br/>
+    <span class="cv-indent"><em>Repositories:</em> <a href="https://github.com/gabearod2/omni_control_ws">gabearod2/omni_control_ws</a></span><br/>
+    <span class="cv-indent"><em>Tools:</em> MATLAB, Inventor, Python, C/C++, ROS2</span>
   </p>
-
-</p>
-
 </div>
 
 <div class="cv-section">
-  <div class="cv-title">Skills</div>
+  <div class="cv-title">Skills and Technologies</div>
   <div class="cv-divider"></div>
   <p>
     <strong>Languages:</strong> English (Fluent), Spanish (Full Professional Proficiency)<br/>
-    <strong>Proficient In:</strong> MATLAB, Simulink, Python, C/C++, ROS2, Micro-ROS, Git, Inventor, Siemens NX<br/>
-    <strong>Familiar With:</strong> Femap with NASTRAN, CATIA v5, STK, SolidWorks, Javascript, Isaac Gym, Nav2, Docker<br/>
-    <strong>Robotics Hardware:</strong> Unitree Go2, Jetson AGX/NX/Nano, ESP32, Raspberry Pi<br/>
+    <strong>Proficient In:</strong> MATLAB, Simulink, Python, C/C++, Inventor, Siemens NX, ROS2, Micro-ROS, Isaac Lab, Isaac Sim, PyCUDA, Git, MS Excel<br/>
+    <strong>Familiar With:</strong> Femap with NASTRAN, CATIA v5, STK, SolidWorks, Javascript, Isaac Gym, Nav2, Docker, FreeRTOS<br/>
+    <strong>Robotics Hardware:</strong> Unitree Go2, Jetson AGX/NX/Nano, ESP32, Raspberry Pi
   </p>
 </div>
 
@@ -164,15 +164,21 @@ redirect_from:
   <div class="cv-title">Selected Honors & Awards</div>
   <div class="cv-divider"></div>
   <p>
-    ➤ Engineering Physics Outstanding Scholar Award, Embry-Riddle (2025)<br/>
-    ➤ Dean’s List, Embry-Riddle (All Semesters)<br/>
-    ➤ Diamond Eagle Scholarship, Embry-Riddle (All Semesters)<br/>
-    ➤ Sunshine State Conference Commissioner’s Honor Roll (2021, 2022)<br/>
+    ➤ Engineering Physics Outstanding Scholar Award, ERAU (2025)<br/>
+    ➤ Dean’s List, ERAU (All Semesters)<br/>
+    ➤ Scholar-Athlete Award, ERAU (2022)<br/>
+    ➤ Diamond Eagle Scholarship, ERAU (All Semesters)<br/>
   </p>
 </div>
 
 <div class="cv-section">
   <div class="cv-title">Professional Memberships</div>
   <div class="cv-divider"></div>
-  <p>➤ Society of Hispanic Professional Engineers (April 2023 - Present)</p>
+  <p>➤ Society of Hispanic Professional Engineers (Apr 2023 - Present)</p>
+</div>
+
+<div class="cv-section">
+  <div class="cv-title">References</div>
+  <div class="cv-divider"></div>
+  <p>Available upon request.</p>
 </div>
