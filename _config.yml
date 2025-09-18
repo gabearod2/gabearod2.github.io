@@ -21,7 +21,7 @@ repository               : "gabearod2/gabearod2.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Headshot_2.jpg"
+  avatar           : "headshot_2.jpg"
   name             : "Gabriel Rodriguez"
   pronouns         : # example: "she/her"  
   bio              : "A doer focused on robotics and control."
