@@ -12,7 +12,7 @@ Hello! My name is Gabriel Rodriguez and I'm a first-year [MSR](https://www.ri.cm
 
 Previously, I graduated from [Embry-Riddle Aeronautical University (ERAU)](https://erau.edu/), with dual degrees in [Aerospace Engineering](https://daytonabeach.erau.edu/college-engineering/aerospace) and [Engineering Physics](https://daytonabeach.erau.edu/college-arts-sciences/physical-sciences) (minor in Applied Mathematics), where I won the Engineering Physics Outstanding Scholar Award. My past experience spans research roles and internships at MIT Lincoln Laboratory's [Controls and Autonomous Systems Group](https://www.ll.mit.edu/r-d/engineering/control-and-autonomous-systems-engineering), ERAU's [Engineering Physics Propulsion Lab](https://eppl.us/), and [Textron Systems](https://www.textronsystems.com/).
 
-You can learn more about my experience [here](https://gabearod2.github.io/cv/) and my explore my projects [here](https://gabearod2.github.io/projects/). When I’m not studying or tinkering with robots, you can usually find me nerding out about jiu-jitsu, my second biggest obsession. 
+You can learn more about my experience [here](https://gabearod2.github.io/cv/) and explore my projects [here](https://gabearod2.github.io/projects/). When I’m not studying or tinkering with robots, you can usually find me nerding out about jiu-jitsu, my second biggest obsession. 
 
 <!-- Top Row: Three Images with Proper Widths -->
 <div style="display: flex; justify-content: space-between; gap: 10px; width: 100%; box-sizing: border-box;">

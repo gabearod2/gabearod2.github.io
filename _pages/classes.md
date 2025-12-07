@@ -4,8 +4,20 @@ title: "My Classes"
 permalink: /classes/
 author_profile: true
 ---
-[Embry-Riddle Unofficial Transcript](https://gabearod2.github.io/files/unofficial_transcript_spring_2025.pdf)
+[Embry-Riddle Unofficial Transcript](https://gabearod2.github.io/files/unofficial_transcript_erau.pdf)
 
+## Spring 2026
+* ### Optimal Control & Reinforcement Learning
+
+This is a course about how to make robots move through and interact with their environment with speed, efficiency, and robustness. We will survey a broad range of topics from nonlinear dynamics, linear systems theory, classical optimal control, numerical optimization, state estimation, system identification, and reinforcement learning. The goal is to provide students with hands-on experience applying each of these ideas to a variety of robotic systems so that they can use them in their own research.
+
+* ### Fundamentals of Computer Vision
+
+This course introduces the fundamental concepts and methods of computer vision—the analysis of images to reconstruct and understand the scenes that generated them. The course emphasizes developing practical skills required to implement and work with modern computer vision pipelines in robotics and other real-world applications. Topics the course covers include low-level image processing; geometry-based methods such as structure from motion for 3D understanding; learning-based methods for semantic tasks; and motion-based methods for video processing.
+
+* ### Fundamentals of Mechatronics Design for Robotics
+
+This course introduces students to the fundamentals of robotic hardware and mechatronic system design. Through hands-on labs and projects, students will design and analyze core subsystems such as electronic circuits, actuator control, and embedded microcontroller programming in C. Emphasis is placed on component selection, integration of sensing, actuation, and mechanical design for building robust, reproducible systems. Students will also gain experience debugging hardware, sourcing commercial components, and working collaboratively in interdisciplinary teams to develop deployable robotic systems.
 
 ## Fall 2025
 * ### Mechanics of Manipulation

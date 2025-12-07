@@ -21,23 +21,23 @@ category: academic
     </p>
 
     <p>
-        As the software and communications engineer I implemented a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I sharpened my skills in C/C++, controls, and ROS2. My current project repos can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a> and <a href="https://github.com/gabearod2/topplebot_station" target="_blank">here</a>, with support for publishing IMU messages to ROS and visualizing orientation in RViz. 
+        As the software and communications engineer I implemented a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I sharpened my skills in C, C++, controls, and ROS2. The project repos can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a> and <a href="https://github.com/gabearod2/topplebot_station" target="_blank">here</a>.
     </p>
 
 <!-- Balancing Control and Demonstration -->
 <h3>Balancing Control and Demonstration</h3>
 
     <p>
-        Even with the prior senior design team's hardware, with the addition of micro-ROS, the new IMU, and the AHRS algo, I had to rewrite the PID controller to work for our updated system. In the balancing configuration, the user sets the desired balancing point upon initialization of the controller (~ 5 seconds after system boot-up). The desired balancing point is defined as the quaternion representation of the balancing point orientation, \(\mathbf{q}_{\text{des}}=\mathbf{q}_{\text{init}}\). To find the orientational error from the desired balancing point, the following quaternionic relation is utilized:
+        In the balancing configuration, the user sets the desired balancing point upon initialization of the controller (~ 5 seconds after system boot-up). The desired balancing point is defined as the quaternion representation of the balancing point orientation, \(\mathbf{q}_{\text{des}}=\mathbf{q}_{\text{init}}\). To find the orientational error from the desired balancing point, the following quaternionic relation is utilized:
 
         $$
-            \mathbf{q}_{\text{err},k} = \mathbf{q}_{\text{des}}^{-1} \otimes \mathbf{q}_{k}
+            \mathbf{q}_{\text{err},k} = \mathbf{q}_{\text{des}}^{-1} \otimes \mathbf{q}_{k}.
         $$
 
-        Using a small-angle approximation (safe for balancing purposes) of the error quaternion, the roll, pitch, and yaw errors are defined using the following relation:
+        Using a small-angle approximation (safe for balancing purposes) of the error quaternion, the roll, pitch, and yaw errors are defined using:
 
         $$
-            \mathbf{q}_{\text{err},k} = \left[ \frac{\phi_{\text{err,k}}}{2}, \frac{\theta_{\text{err,k}}}{2}, \frac{\psi_{\text{err,k}}}{2}, 1 \right]
+            \mathbf{q}_{\text{err},k} = \left[ \frac{\phi_{\text{err,k}}}{2}, \frac{\theta_{\text{err,k}}}{2}, \frac{\psi_{\text{err,k}}}{2}, 1 \right].
         $$
         
         To aid with damping, the controller used the gyroscopic values to avoid differentiation of the system error. The raw values were extremely noisy, so I implemented a lightweight low-pass filter:

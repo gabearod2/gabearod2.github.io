@@ -25,7 +25,7 @@ category: eppl
         ➤ Raspberry Pi, and <br/>
         ➤ gas sensors. <br/> <br/>
         
-        With our additions, the robot could currently autonomously navigate indoors, leveraging our custom <a href="https://docs.nav2.org/" target="_blank">Nav2</a> implementation <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">amigo_ros2</a>. The team at EPPL are currently adding outdoor (GPS) functionality. 
+        With our additions, the robot could autonomously navigate indoors, leveraging our custom <a href="https://docs.nav2.org/" target="_blank">Nav2</a> implementation <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">amigo_ros2</a>. The team at EPPL are currently adding outdoor (GPS) navigation functionality. 
     </p>
 
     <!-- AMIGO Image, Centered -->
@@ -37,63 +37,20 @@ category: eppl
 <h3>RL Locomotion Training and Deployment</h3>
 
     <p>
-        Powerplants often exhibit difficult terrain for a quadruped to traverse. Specifically, most plants are littered with open-backed staircases that pose a great challenge for blind locomotion policies and controllers. Too often, the robot (especially smaller quadrupeds like the Go2) steps into the open region and falls face first into the stairs.<br/><br/>
+        Powerplants often exhibit difficult terrain for a quadruped to traverse. Specifically, most plants are littered with open-backed staircases that pose a great challenge for blind locomotion policies and controllers. Too often, the robot (especially a smaller quadruped like the Go2) steps into the open region and falls face first into the stairs.<br/><br/>
         
-        To tackle this issue, I acquainted myself with RL methods for robot locomotion. Starting from the basic Isaac Lab Go2 environment, I edited the reward structure, added privileged observations (for asymmetric Actor Critic NNs), implemented increased domain randomization, and abused my gaming laptop's GPU. To my surprise, once I had a policy that looked ~acceptable~ in the sim, I couldn't find a deployment framework for the Go2. So, I had to make my own and called it <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">go2_rl_ws</a>.<br/><br/>
-        
-        After a couple sketchy tests (where we hung the AMIGO up with paracord), it worked! Much to my disappointment though, the sim2real transfer wasn't exactly one to one... In fact, even with strenuous efforts in reward tuning, my policies reliably failed when deployed on the real robot. There are a few reasons why this was the case:<br/><br/>
-
-        ➤ Inconsistencies between the sim's motor models and those on the robot<br/>
-        ➤ Inconsistent frequencies induced by the ROS2 deployment<br/>
-        ➤ PD gain mismatches induced by the ROS2 deployment<br/>
-        ➤ Overfitting of the sim's simulated dynamics<br/><br/>
-
-        Using the blind locomotion standard, the following observations were used for the policy:
-    </p>
-
-    <!-- RL Control Image, Centered -->
-    <p align="center">
-        <img src="/images/rl_control.jpg" alt="AMIGO, Bryan, Jose, Gabriel" width="100%"/>
-    </p>
-    
-    <p>
-        Despite the shortcomings, however, I was able to train and deploy a high frequency hopping gait. Here's what that looked like:
+        To tackle this issue, I acquainted myself with RL methods for robot locomotion. Starting from the basic Isaac Lab Go2 environment, I edited the reward structure, added privileged observations (for asymmetric Actor Critic NNs), implemented increased domain randomization, and abused my gaming laptop's GPU. To my surprise, once I had a policy that looked ~acceptable~ in the sim, I couldn't find a deployment framework for the Go2. So, I built my own and called it <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">go2_rl_ws</a>.<br/><br/>
     </p>
 
     <!-- AMIGO RL Deployment Video, Centered -->
     <p align="center">
-        <iframe width="600" height="350" src="https://www.youtube.com/embed/54QndZJDfPw" 
+        <iframe width="500" height="300" src="https://www.youtube.com/embed/54QndZJDfPw" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </p>
-
-<h3>Anomaly Searching</h3>
-
-    <p>        
-        Last semester, we began tackling autonomous room searching. This will be an invaluable asset during real-world deployment, allowing us to find anomalies in dynamically changing environments. My current approach assigns a time-dependant probability distribution to the region of interest, while the robot determines the next target waypoint in a roughly random manner. The idea is to "push" the AMIGO towards the higher probability areas, while not forgetting about lower probability areas.<br/><br/>
-
-        The probability distribution is currently updated as follows, all starting with a uniform distribution, \(p_{0}(x, y) = 0.5\).
-
-
-        $$
-        p_{t+1}(x, y) = p_t(x, y) + \alpha \left( \frac{\partial p}{\partial s} + \frac{\partial p}{\partial a} \right)
-        $$
-
-        Where \(s\) is the robot position, and \(a\) are detected anomalies in the search area, and their influence on the probability is designed as follows. 
-
-        $$
-        \frac{\partial p}{\partial s} = \frac{\min(p(x,y))}{\beta} \cdot \tanh \left( (r_{\text{cam}} \cdot s)^2 \right) - \frac{\min(p(x,y))}{\beta}
-        $$
-
-        $$
-        \frac{\partial p}{\partial a} = \sum_{i=1}^{N} \exp\left(-\frac{d_{\text{a}_i}}{r_a}\right)
-        $$
-
-        Determining the next action at each time step is the true crux of this controller and still under development. We are looking to integrate principles of RL, while being able to learn while deployed.
     </p>
 
 <!-- Attributions Section -->
 <h3>Attributions</h3>
     <p>
-        Funded by <a href="https://www.steamsolutions.com/" target="_blank">Steam Solutions</a>, and housed by the <a href="https://www.linkedin.com/company/eppl-erau-db" target="_blank">Engineering Physics Propulsion Lab @ ERAU</a>. Our custom Nav2 implementation, mostly authored by my colleague, <a href="https://www.linkedin.com/in/jose-castelblanco-002640195/" target="_blank">Jose Castelblanco</a>, can be found <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">here</a>. 
+        Funded by <a href="https://www.steamsolutions.com/" target="_blank">Steam Solutions</a>, and housed by the <a href="https://www.linkedin.com/company/eppl-erau-db" target="_blank">Engineering Physics Propulsion Lab @ ERAU</a>.  
     </p>
