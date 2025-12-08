@@ -7,9 +7,8 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- Ensure categories are ordered with "Professional" first -->
-{% assign category_order = "eppl,academic,personal" | split: "," %}
-
+<!-- set categprty order here -->
+{% assign category_order = "academic,eppl,personal" | split: "," %}
 {% for category_name in category_order %}
   {% assign category = site.project_category[category_name] %}
   {% if category %}
@@ -46,17 +45,16 @@ author_profile: true
     flex-direction: row;
     align-items: center;
     width: 100%;
-    max-width: 900px;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 15px;
     box-sizing: border-box;
-    gap: 20px; /* Even spacing between image and text */
+    gap: 20px;
   }
 
   .project-image {
-    width: 150px;
-    aspect-ratio: 1 / 1; /* Always square */
+    width: 10%;
+    aspect-ratio: 1 / 1; 
     flex-shrink: 0;
   }
 
