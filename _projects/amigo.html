@@ -6,8 +6,7 @@ collection: projects
 category: eppl
 ---
 
-<!-- Heading and Summary Alt + Z-->
-<h3>Summary</h3>
+<h2>Summary</h2>
 
     <p>
         As a part of the AMIGO project, I... <br/> <br/>
@@ -28,13 +27,11 @@ category: eppl
         With our additions, the robot could autonomously navigate indoors, leveraging our custom <a href="https://docs.nav2.org/" target="_blank">Nav2</a> implementation <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">amigo_ros2</a>. The team at EPPL are currently adding outdoor (GPS) navigation functionality. 
     </p>
 
-    <!-- AMIGO Image, Centered -->
     <p align="center">
         <img src="/images/amigo/amigo.jpg" alt="AMIGO, Bryan, Jose, Gabriel" width="500"/>
     </p>
 
-<!-- RL Training and Deployment Story -->
-<h3>RL Locomotion Training and Deployment</h3>
+<h2>RL Locomotion Training and Deployment</h2>
 
     <p>
         Powerplants often exhibit difficult terrain for a quadruped to traverse. Specifically, most plants are littered with open-backed staircases that pose a great challenge for blind locomotion policies and controllers. Too often, the robot (especially a smaller quadruped like the Go2) steps into the open region and falls face first into the stairs.<br/><br/>
@@ -42,15 +39,13 @@ category: eppl
         To tackle this issue, I acquainted myself with RL methods for robot locomotion. Starting from the basic Isaac Lab Go2 environment, I edited the reward structure, added privileged observations (for asymmetric Actor Critic NNs), implemented increased domain randomization, and abused my gaming laptop's GPU. To my surprise, once I had a policy that looked ~acceptable~ in the sim, I couldn't find a deployment framework for the Go2. So, I built my own and called it <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">go2_rl_ws</a>.<br/><br/>
     </p>
 
-    <!-- AMIGO RL Deployment Video, Centered -->
     <p align="center">
         <iframe width="500" height="300" src="https://www.youtube.com/embed/54QndZJDfPw" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
 
-<!-- Attributions Section -->
-<h3>Attributions</h3>
+<h2>Attributions</h2>
     <p>
         Funded by <a href="https://www.steamsolutions.com/" target="_blank">Steam Solutions</a>, and housed by the <a href="https://www.linkedin.com/company/eppl-erau-db" target="_blank">Engineering Physics Propulsion Lab @ ERAU</a>.  
     </p>

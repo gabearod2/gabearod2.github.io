@@ -7,14 +7,14 @@ category: academic
 ---
 
 <!-- Project Websites -->
-<h3>Project Website</h3>
+<h2>Project Website</h2>
 
     <p>
         Refer to the project <a href="https://gabearod2.github.io/topplebot/" target="_blank">website</a> to create your own ToppleBot!
     </p>
 
 <!-- Summary -->
-<h3>Summary</h3>
+<h2>Summary</h2>
 
     <p>
         The ToppleBot project builds off of related momentum wheel cubes like <a href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, <a href="https://www.wevolver.com/specs/cubli" target="_blank">Cubli</a>, and <a href="https://github.com/remrc/Self-Balancing-Cube" target="_blank">REM-RC's Balancing Cube</a>. This project served as my senior design project for my Engineering Physics Bachelor's degree. 
@@ -25,7 +25,7 @@ category: academic
     </p>
 
 <!-- Balancing Control and Demonstration -->
-<h3>Balancing Control and Demonstration</h3>
+<h2>Balancing Control and Demonstration</h2>
 
     <p>
         In the balancing configuration, the user sets the desired balancing point upon initialization of the controller (~ 5 seconds after system boot-up). The desired balancing point is defined as the quaternion representation of the balancing point orientation, \(\mathbf{q}_{\text{des}}=\mathbf{q}_{\text{init}}\). To find the orientational error from the desired balancing point, the following quaternionic relation is utilized:
@@ -63,7 +63,7 @@ category: academic
     </p>
 
     <!-- Odometry System and Demonstration -->
-<h3>Odometry System and Demonstration</h3>
+<h2>Odometry System and Demonstration</h2>
 
     <p>
         I also got an odometry system up and running, based solely off the IMU data. Modeling each corner of the cube as a node, I dynamically update their positions using the quaternion from the AHRS algorithm. Then, using the projected gravity vector, I determine which node is the "balancing node" which allows me to determine the translation from the previous balancing node to the current one. I can then determine the position of the model and it's orientation and display it through RViz. Initially the visualization updated slowly and often mispresented the system orientation. Through multi-threading I was able to combat the delays and get another nice demonstration.
@@ -90,7 +90,7 @@ category: academic
     </p>
 
  Current Status and Media
-<h3>Odometry System</h3>
+<h2>Odometry System</h2>
 
     <p>
         We start by defining the node positions in the body-fixed frame \( \mathbf{p}_i^b \). Nodes \( i = 0 \) to \( 7 \) represent the ToppleBot's corners, and \( i = 8 \) represents the center (origin) of the body-fixed frame. These positions are parameterized by the cube's side length \( l \), which can be adjusted to support an arbitrary cube size.

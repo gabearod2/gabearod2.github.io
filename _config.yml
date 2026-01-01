@@ -21,12 +21,12 @@ repository               : "gabearod2/gabearod2.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "headshot_2.jpg"
+  avatar           : "headshot.jpg"
   name             : "Gabriel Rodriguez"
   pronouns         : # example: "she/her"  
   bio              : "A doer focused on robotics and control."
-  location         : "Miami, FL"
-  employer         : "ERAU"
+  location         : "Pittsburgh, PA"
+  employer         : "CMU"
   uri              : # URL
   email            : "gabearod2@gmail.com" 
 

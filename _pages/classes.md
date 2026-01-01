@@ -4,7 +4,6 @@ title: "My Classes"
 permalink: /classes/
 author_profile: true
 ---
-[Embry-Riddle Unofficial Transcript](https://gabearod2.github.io/files/unofficial_transcript_erau.pdf)
 
 ## Spring 2026
 * ### Optimal Control & Reinforcement Learning
