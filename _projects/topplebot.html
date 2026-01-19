@@ -6,14 +6,12 @@ collection: projects
 category: academic
 ---
 
-<!-- Project Websites -->
 <h2>Project Website</h2>
 
     <p>
         Refer to the project <a href="https://gabearod2.github.io/topplebot/" target="_blank">website</a> to create your own ToppleBot!
     </p>
 
-<!-- Summary -->
 <h2>Summary</h2>
 
     <p>
@@ -24,58 +22,57 @@ category: academic
         As the software and communications engineer I implemented a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I sharpened my skills in C, C++, controls, and ROS2. The project repos can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a> and <a href="https://github.com/gabearod2/topplebot_station" target="_blank">here</a>.
     </p>
 
-<!-- Balancing Control and Demonstration -->
-<h2>Balancing Control and Demonstration</h2>
+<h2>Balancing Control</h2>
 
     <p>
-        In the balancing configuration, the user sets the desired balancing point upon initialization of the controller (~ 5 seconds after system boot-up). The desired balancing point is defined as the quaternion representation of the balancing point orientation, \(\mathbf{q}_{\text{des}}=\mathbf{q}_{\text{init}}\). To find the orientational error from the desired balancing point, the following quaternionic relation is utilized:
+        In the balancing configuration, the orientational error \(\boldsymbol{q}_\text{err}\) from the desired balancing point \(\boldsymbol{q}_{\text{des}}\) at time step \(k\) is defined by
 
         $$
-            \mathbf{q}_{\text{err},k} = \mathbf{q}_{\text{des}}^{-1} \otimes \mathbf{q}_{k}.
+            \boldsymbol{q}_{\text{err},k} = \boldsymbol{q}_{\text{des}}^{-1} \otimes \boldsymbol{q}_{k}.
         $$
 
-        Using a small-angle approximation (safe for balancing purposes) of the error quaternion, the roll, pitch, and yaw errors are defined using:
+        Using a first-order approximation, we can find an error vector in Euler angles \(\boldsymbol{\eta}_{\text{err},k} \triangleq \left[\phi_{\text{err},k}, \theta_{\text{err},k}, \psi_{\text{err},k}\right]^\top\) utilizing
 
         $$
-            \mathbf{q}_{\text{err},k} = \left[ \frac{\phi_{\text{err,k}}}{2}, \frac{\theta_{\text{err,k}}}{2}, \frac{\psi_{\text{err,k}}}{2}, 1 \right].
+            \boldsymbol{q}_{\text{err},k} \approx \begin{bmatrix} \frac{\phi_{\text{err,k}}}{2} \\  \frac{\theta_{\text{err,k}}}{2} \\ \frac{\psi_{\text{err,k}}}{2} \\ 1\end{bmatrix} = \begin{bmatrix} \frac{\boldsymbol{\eta}_{\text{err},k}}{2} \\ 1 \end{bmatrix}.
         $$
         
-        To aid with damping, the controller used the gyroscopic values to avoid differentiation of the system error. The raw values were extremely noisy, so I implemented a lightweight low-pass filter:
+        To aid with damping, the controller used the gyroscopic values to avoid differentiation of the system error. I also implemented a lightweight low-pass filter to help with noisy measurements, namely:
 
         $$
-            \mathbf{\omega}_{k} = \alpha \mathbf{\omega}_{\text{raw},k} + (1 - \alpha) \mathbf{\omega}_{k-1}
+            \boldsymbol{\omega}_{k} = \alpha \boldsymbol{\omega}_{\text{raw},k} + (1 - \alpha) \boldsymbol{\omega}_{k-1}.
         $$
 
-        With the error fully defined, and assuming independant axis control, the speed to mantain balancing can be designed using the classic PID control. Where motor 1 is assumed to have control over the x-axis.
+        Assuming independant axis control, the momentum wheel speed to mantain balancing can be designed using the classic PID control.
 
         $$
-            u_{1,k} = k_p \phi_{\text{err},k} + k_i \sum_{i=0}^{k} \phi_{\text{err},k} + k_d \omega_{x,k}
+            \boldsymbol{u}_k = K_p \boldsymbol{\eta}_{\text{err},k} + K_i \sum_{i=0}^{k} \boldsymbol{\eta}_{\text{err},k} + K_d \boldsymbol{\omega}_{k}
         $$
-
-        After a "considerable" amount of tuning, the following balancing capabilities are achieved (video below). I went for this model-free approach due to the limited time for control development. When first designing this controller, I felt I didn't have time to disassemble the cube, obtain reasonable system parameters, develop the mathematical model, AND implement a successful controller. Yet, with the amount of tuning I ended up having to do, it would have been better to just go through the initial headache and have the incredible advantages of a reasonale system model. Definitely a lesson I will take with me into future projects (or even the extension of this one).
     </p>
 
-    <!-- ToppleBot Corner Balancing Video, Centered -->
+<h2>Balancing Demonstration</h2>
+    
+    <p>
+        After a "considerable" amount of tuning, the following balancing capabilities are achieved (video below). 
+    </p>
+
     <p align="center">
         <iframe width="600" height="350" src="https://www.youtube.com/embed/5LkHNn3iz_Y" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
 
-    <!-- Odometry System and Demonstration -->
-<h2>Odometry System and Demonstration</h2>
+<h2>Odometry and Demonstration</h2>
 
     <p>
-        I also got an odometry system up and running, based solely off the IMU data. Modeling each corner of the cube as a node, I dynamically update their positions using the quaternion from the AHRS algorithm. Then, using the projected gravity vector, I determine which node is the "balancing node" which allows me to determine the translation from the previous balancing node to the current one. I can then determine the position of the model and it's orientation and display it through RViz. Initially the visualization updated slowly and often mispresented the system orientation. Through multi-threading I was able to combat the delays and get another nice demonstration.
+        The ToppleBot also featured an odometry tracking system, based solely off the IMU data. Defining each corner of the cube as a node, we dynamically updated their positions using the quaternion from the AHRS algorithm. Then, using the projected gravity vector, we determined which corner/node is the "balancing node" and used its displacement from the previous balancing node to update the ToppleBot's world pose. Through multi-threading, the system can quickly send updates to the control station where the odometry can be visualized on RViz (as shown below).
     </p>
 
-    <!-- ToppleBot Odometry Video, Centered -->
     <p align="center">
         <iframe width="600" height="350" src="https://www.youtube.com/embed/oSa1dvt7C_U" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
-
 
 <!--
     <p>

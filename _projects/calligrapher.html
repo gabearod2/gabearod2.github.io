@@ -1,0 +1,33 @@
+---
+title: "Franka Emika Panda Calligrapher"
+image: /images/calligrapher/calligrapher_logo.jpg
+excerpt: A Linear MPC with Force Control for Simulated Robotic Calligraphy
+collection: projects
+category: academic
+---
+
+<h2>Summary</h2>
+
+    <p>
+       For my <a href="https://zackory.com/16741-25/" target="_blank">Mechanics of Manipulation</a> course project, my teammate <a href="https://www.linkedin.com/in/arnavsrikanth/" target="_blank">Arnav</a> and I developed a robotic calligraphy framework using our professor’s simulator <a href="https://github.com/Zackory/mengine" target="_blank">mengine</a>. Motivated by the long-standing use of autopens for signatures, we investigated whether a general-purpose robotic manipulator could achieve comparable stroke quality. To track stroke thickness, we explicitly model and control pen–paper contact forces, leading to the control architecture below.
+    </p>
+
+    <p align="center">
+        <img src="/images/calligrapher/calligrapher_control.png" alt="Calligrapher control architecture" width="100%"/>
+    </p>
+
+    <p>
+        First, we compute an end-effector desired trajectory \(\boldsymbol{w}\) using CV trajectory generation projected onto the writing surface. We could naively use Inverse Kinematics to generate a joint-space trajectory, but this would not account for any variations in desired stroke thickness. Thus, we decouple kinematic tracking from contact regulation, using a linear joint-space MPC for end-effector position tracking while regulating the pen–paper interaction force (and thus stroke thickness \(\delta\)) via PID force control. The force loop offsets the desired end-effector \(z\)-trajectory, producing \(\hat{\boldsymbol{w}}\), and the linear MPC tracks this modified reference through kinematics-level optimization. <br><br>
+        
+        The figure below compares a baseline inverse-kinematics controller, kinematic MPC alone, and MPC with PD force feedback, demonstrating the performance gains from explicit force regulation.
+    </p>
+
+    <p align="center">
+        <img src="/images/calligrapher/calligrapher_compare.png" alt="Calligrapher control comparison" width="50%"/>
+    </p>
+
+<h2>Links</h2>
+
+    <p>
+        For a complete technical description, see our final paper <a href="https://gabearod2.github.io/files/calligrapher_final_report.pdf" target="_blank">here</a>. Source code and datasets are available <a href="https://github.com/gabearod2/calligraphy" target="_blank">here</a>.
+    </p>
