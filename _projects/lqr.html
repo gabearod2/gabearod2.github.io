@@ -116,6 +116,18 @@ h4 {
 <h2>On Stability</h2>
 
 <p>
+    Using Lyapunov stability analysis, we can prove asymptotic stability of the LQR. We first define the Lyapunov candidate for the attitude dynamics (replacing the "inner" subscript with "1" for brevity):
+    \[
+    \mathcal{V}_1(\mathbf{x}_1) = \mathbf{x}_1^\top \mathbf{P}_1 \mathbf{x}_1
+    \]
+    We know also that our closed-loop system can be defined using 
+    \[
+    \mathbf{\dot{x}}_1 = \begin{bmatrix} \mathbf{A} - \mathbf{BR}^{-1}\mathbf{B}^\top\mathbf{P}\end{bmatrix} \mathbf{x}_1
+
+
+
+
+
     Doing some block-diagram algebra, we can actually prove stability (ignoring frequency differences between inner and outer loops). 
 </p>
 -->
