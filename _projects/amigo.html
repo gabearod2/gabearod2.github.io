@@ -8,35 +8,42 @@ category: eppl
 
 <h2>Summary</h2>
 
-    <p>
-        As a part of the AMIGO project, I... <br/> <br/>
-        ➤ developed an anomaly searching control algorithm, <br/>
-        ➤ trained custom RL policies in <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, <br/>
-        ➤ wrote a ROS2 based <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">RL deployment framework</a>, <br/>
-        ➤ wrote additional ROS2 functionalities (actions, services), and <br/>
-        ➤ supported our rapid prototyping efforts.<br/><br/>
+<p>
+During my working on AMIGO, I completed the following: <br/> <br/>
+➤ developed an anomaly searching control algorithm, <br/>
+➤ trained RL policies in <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, <br/>
+➤ wrote a ROS2 based <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">RL deployment framework</a>, <br/>
+➤ wrote additional ROS2 functionalities (actions, services), and <br/>
+➤ supported our rapid prototyping efforts.<br/><br/>
         
-        The goal was (and is) to develop an <strong>autonomous robotic platform for powerplant diagnostics</strong>. We outfitted the Unitree Go2 EDU quadruped with ... <br/><br/>
-        ➤ Jetson AGX Orin, <br/>
-        ➤ 2D LiDAR, <br/>
-        ➤ ZED X camera, <br/>
-        ➤ RealSense camera, <br/>
-        ➤ Raspberry Pi, and <br/>
-        ➤ gas sensors. <br/> <br/>
+The goal of the project is to develop an <strong>autonomous robotic platform for powerplant diagnostics</strong>. 
+ <br/><br/>
+➤ Jetson AGX Orin, <br/>
+➤ 2D LiDAR, <br/>
+➤ ZED X camera, <br/>
+➤ RealSense camera, <br/>
+➤ Raspberry Pi, and <br/>
+➤ toxic gas sensors. <br/> <br/>
         
-        With our additions, the robot could autonomously navigate indoors, leveraging our custom <a href="https://docs.nav2.org/" target="_blank">Nav2</a> implementation <a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">amigo_ros2</a>. The team at EPPL are currently adding outdoor (GPS) navigation functionality. 
-    </p>
+With our additions, the robot could autonomously navigate indoors, leveraging our custom
+<a href="https://docs.nav2.org/" target="_blank">Nav2</a> implementation 
+<a href="https://github.com/eppl-erau-db/amigo_ros2" target="_blank">amigo_ros2</a>.  
+</p>
 
-    <p align="center">
-        <img src="/images/amigo/amigo.jpg" alt="AMIGO, Bryan, Jose, Gabriel" width="500"/>
-    </p>
+<p align="center">
+<img src="/images/amigo/amigo.jpg" alt="AMIGO, Bryan, Jose, Gabriel" width="500"/>
+</p>
 
 <h2>RL Locomotion Training and Deployment</h2>
 
-    <p>
-        Powerplants often exhibit difficult terrain for a quadruped to traverse. Specifically, most plants are littered with open-backed staircases that pose a great challenge for blind locomotion policies and controllers. Too often, the robot (especially a smaller quadruped like the Go2) steps into the open region and falls face first into the stairs.<br/><br/>
+<p>
+Powerplants often exhibit difficult terrain for a quadruped to traverse. 
+Plants are littered with open-backed staircases that pose a challenge for blind locomotion policies and controllers. 
+Too often, the robot (especially a smaller quadruped like the Go2) steps into the open region and falls face first into the stairs.
+<br/><br/>
         
-        To tackle this issue, I acquainted myself with RL methods for robot locomotion. Starting from the basic Isaac Lab Go2 environment, I edited the reward structure, added privileged observations (for asymmetric Actor Critic NNs), implemented increased domain randomization, and abused my gaming laptop's GPU. To my surprise, once I had a policy that looked ~acceptable~ in the sim, I couldn't find a deployment framework for the Go2. So, I built my own and called it <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">go2_rl_ws</a>.<br/><br/>
+To tackle this issue, I acquainted myself with RL methods for robot locomotion. 
+Starting from the basic Isaac Lab Go2 environment, I edited the reward structure, added privileged observations (for asymmetric Actor Critic NNs), implemented increased domain randomization, and abused my gaming laptop's GPU. To my surprise, once I had a policy that looked ~acceptable~ in the sim, I couldn't find a deployment framework for the Go2. So, I built my own and called it <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">go2_rl_ws</a>.<br/><br/>
     </p>
 
     <p align="center">

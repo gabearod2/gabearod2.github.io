@@ -7,7 +7,17 @@ redirect_from:
   - /about.html
 ---
 
-Hello! My name is Gabriel Rodriguez and I'm a first-year [MSR](https://www.ri.cmu.edu/education/academic-programs/master-of-science-robotics/) student at [Carnegie Mellon's Robotics Institute](https://www.ri.cmu.edu/) advised by [Dr. Wennie Tabib](https://wtabib.com/) at the [RISLab](https://rislab.org/). Currently, I'm working on leveraging differentiable simulation and reinforcement learning to advance agile robot control. Generally, I’m passionate about robotics, with a particular interest in combining classical control methods with learning-based approaches.
+Hello! My name is Gabriel Rodriguez and I'm an [MSR](https://www.ri.cmu.edu/education/academic-programs/master-of-science-robotics/) student at [Carnegie Mellon's Robotics Institute](https://www.ri.cmu.edu/), where I'm advised by [Dr. Wennie Tabib](https://wtabib.com/) at the [RISLab](https://rislab.org/). 
+Generally, I’m passionate about robotics, with a particular interest in the intersection classical control methods and learning.
+
+### News
+
+05-20-2026: Started as a Control Intern at [ACS}()
+
+My first paper, "AcroRL: Learning Aggressive Quadrotor Inversion using Bidirectional Thrust" is now available on [Arxiv](), where we train an RL policy on top of a Hopf fibration-based geometric controller to minimize position deviation during inversions.
+  
+
+
 
 Previously, I graduated from [Embry-Riddle Aeronautical University (ERAU)](https://erau.edu/) with dual degrees in [Aerospace Engineering](https://daytonabeach.erau.edu/college-engineering/aerospace) and [Engineering Physics](https://daytonabeach.erau.edu/college-arts-sciences/physical-sciences) (minor in Applied Mathematics), where I won the Engineering Physics Outstanding Scholar Award. My past experience spans research roles and internships at MIT Lincoln Laboratory's [Controls and Autonomous Systems Group](https://www.ll.mit.edu/r-d/engineering/control-and-autonomous-systems-engineering), ERAU's [Engineering Physics Propulsion Lab](https://eppl.us/), and [Textron Systems](https://www.textronsystems.com/).
 
