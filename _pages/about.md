@@ -21,7 +21,7 @@ dual degrees in Aerospace Engineering and Engineering Physics (minor in Applied
 Mathematics), receiving the Engineering Physics Outstanding Scholar Award.
 Previously I held research and engineering roles at
 [MIT Lincoln Laboratory](https://www.ll.mit.edu/r-d/isr-systems-and-technology),
-[ERAU's Engineering Physics Propulsion Lab](https://eppl.us/), and
+ERAU's [Engineering Physics Propulsion Lab](https://eppl.us/), and
 [Textron Systems](https://www.textronsystems.com/).
 
 ## News
