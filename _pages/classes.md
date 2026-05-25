@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "My Classes"
+title: "Classes"
 permalink: /classes/
 author_profile: true
 ---
