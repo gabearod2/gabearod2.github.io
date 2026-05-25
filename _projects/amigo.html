@@ -9,14 +9,17 @@ category: eppl
 <h2>Summary</h2>
 
 <p>
-During my working on AMIGO, I completed the following: <br/> <br/>
-➤ developed an anomaly searching control algorithm, <br/>
-➤ trained RL policies in <a href="https://github.com/gabearod2/IsaacLab" target="_blank">Isaac Lab</a>, <br/>
-➤ wrote a ROS2 based <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">RL deployment framework</a>, <br/>
-➤ wrote additional ROS2 functionalities (actions, services), and <br/>
-➤ supported our rapid prototyping efforts.<br/><br/>
+During my working on AMIGO, I completed the following: <br/> <br/> 
+➤ developed an anomaly searching control algorithm, <br/> 
+➤ trained RL policies in <a href="https://github.com/gabearod2/IsaacLab"
+target="_blank">Isaac Lab</a>, <br/> 
+➤ wrote a ROS2 based <a href="https://github.com/eppl-erau-db/go2_rl_ws"
+target="_blank">RL deployment framework</a>, <br/> 
+➤ wrote additional ROS2 functionalities (actions, services), and <br/> 
+➤ supported our rapid prototyping efforts.<br/><br/> 
         
-The goal of the project is to develop an <strong>autonomous robotic platform for powerplant diagnostics</strong>. 
+The goal of the project is to develop an <strong>autonomous robotic platform for
+powerplant diagnostics</strong>.  
  <br/><br/>
 ➤ Jetson AGX Orin, <br/>
 ➤ 2D LiDAR, <br/>
@@ -37,22 +40,35 @@ With our additions, the robot could autonomously navigate indoors, leveraging ou
 <h2>RL Locomotion Training and Deployment</h2>
 
 <p>
-Powerplants often exhibit difficult terrain for a quadruped to traverse. 
-Plants are littered with open-backed staircases that pose a challenge for blind locomotion policies and controllers. 
-Too often, the robot (especially a smaller quadruped like the Go2) steps into the open region and falls face first into the stairs.
+Powerplants often exhibit difficult terrain for a quadruped to traverse. Plants
+are littered with open-backed staircases that pose a challenge for blind
+locomotion policies and controllers. Too often, the robot (especially a smaller
+quadruped like the Go2) steps into the open region and falls face first into the
+stairs.
 <br/><br/>
         
-To tackle this issue, I acquainted myself with RL methods for robot locomotion. 
-Starting from the basic Isaac Lab Go2 environment, I edited the reward structure, added privileged observations (for asymmetric Actor Critic NNs), implemented increased domain randomization, and abused my gaming laptop's GPU. To my surprise, once I had a policy that looked ~acceptable~ in the sim, I couldn't find a deployment framework for the Go2. So, I built my own and called it <a href="https://github.com/eppl-erau-db/go2_rl_ws" target="_blank">go2_rl_ws</a>.<br/><br/>
+To tackle this issue, I acquainted myself with RL methods for robot locomotion.
+Starting from the basic Isaac Lab Go2 environment, I edited the reward
+structure, added privileged observations (for asymmetric Actor Critic NNs),
+implemented increased domain randomization, and abused my gaming laptop's GPU.
+To my surprise, once I had a policy that looked ~acceptable~ in the sim, I
+couldn't find a deployment framework for the Go2. So, I built my own and called
+it <a href="https://github.com/eppl-erau-db/go2_rl_ws"
+target="_blank">go2_rl_ws</a>.<br/><br/> 
     </p>
 
     <p align="center">
-        <iframe width="500" height="300" src="https://www.youtube.com/embed/54QndZJDfPw" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="500" height="300"
+        src="https://www.youtube.com/embed/54QndZJDfPw"  
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+        encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe> 
     </p>
 
 <h2>Attributions</h2>
     <p>
-        Funded by <a href="https://www.steamsolutions.com/" target="_blank">Steam Solutions</a>, and housed by the <a href="https://www.linkedin.com/company/eppl-erau-db" target="_blank">Engineering Physics Propulsion Lab @ ERAU</a>.  
+        Funded by <a href="https://www.steamsolutions.com/"
+        target="_blank">Steam Solutions</a>, and housed by the <a
+        href="https://www.linkedin.com/company/eppl-erau-db"
+        target="_blank">Engineering Physics Propulsion Lab @ ERAU</a>.   
     </p>

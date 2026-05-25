@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Gabriel Rodriguez"
 title_separator          : "-"
 name                     : &name "Gabriel Rodriguez"
-description              : &description "A doer focused on robotics and control."
+description              : &description "Robotics and control researcher at CMU."
 url                      : https://gabearod2.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "gabearod2/gabearod2.github.io"
@@ -24,9 +24,9 @@ author:
   avatar           : "headshot.jpg"
   name             : "Gabriel Rodriguez"
   pronouns         : # example: "she/her"  
-  bio              : "A doer focused on robotics and control."
+  bio              : "Robotics and control researcher at CMU."
   location         : "Pittsburgh, PA"
-  employer         : "Carnegie Mellon University"
+  employer         : "CMU"
   uri              : # URL
   email            : "gabearod2@gmail.com" 
 
@@ -85,11 +85,13 @@ publication_category:
 # Project Category - The following the list of project categories and their headings
 project_category:
   academic:
-    title: 'Course and Capstone Projects'
+    title: 'Course and Capstone'
   eppl:
-    title: 'Engineering Physics Propulsion Lab Projects'
+    title: 'Engineering Physics Propulsion Lab'
   personal:
-    title: 'Personal Projects'
+    title: 'Personal'
+  risl:
+    title: 'Resilient Intelligent Systems Lab'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"

@@ -8,162 +8,194 @@ category: academic
 
 <h2>Project Website</h2>
 
-    <p>
-        Refer to the project <a href="https://gabearod2.github.io/topplebot/" target="_blank">website</a> to create your own ToppleBot!
-    </p>
+<p>
+Refer to the project <a href="https://gabearod2.github.io/topplebot/"
+target="_blank">website</a> to create your own ToppleBot! 
+</p>
 
 <h2>Summary</h2>
 
-    <p>
-        The ToppleBot project builds off of related momentum wheel cubes like <a href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, <a href="https://www.wevolver.com/specs/cubli" target="_blank">Cubli</a>, and <a href="https://github.com/remrc/Self-Balancing-Cube" target="_blank">REM-RC's Balancing Cube</a>. This project served as my senior design project for my Engineering Physics Bachelor's degree. 
-    </p>
+<p>
+The ToppleBot project builds off of related momentum wheel cubes like <a
+href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, <a
+href="https://www.wevolver.com/specs/cubli" target="_blank">Cubli</a>, and <a
+href="https://github.com/remrc/Self-Balancing-Cube" target="_blank">REM-RC's
+Balancing Cube</a>. This project was my senior design project for my Engineering
+Physics Bachelor's degree.   
+</p>
 
-    <p>
-        As the software and communications engineer I implemented a ROS based system using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through this implementation, I sharpened my skills in C, C++, controls, and ROS2. The project repos can be found <a href="https://github.com/gabearod2/topplebot" target="_blank">here</a> and <a href="https://github.com/gabearod2/topplebot_station" target="_blank">here</a>.
-    </p>
+<p>
+As the software and communications engineer I implemented a ROS based system
+using Micro-ROS to interface with the onboard microcontroller, an ESP32. Through
+this implementation, I sharpened my skills in C/C++, controls, and ROS2. The
+project repos can be found <a href="https://github.com/gabearod2/topplebot"
+target="_blank">here</a> and <a
+href="https://github.com/gabearod2/topplebot_station" target="_blank">here</a>. 
+</p>
 
 <h2>Balancing Control</h2>
 
-    <p>
-        In the balancing configuration, the orientational error \(\boldsymbol{q}_\text{err}\) from the desired balancing point \(\boldsymbol{q}_{\text{des}}\) at time step \(k\) is defined by
+<p>
+In the balancing configuration, the orientational error
+\(\boldsymbol{q}_\text{err}\) from the desired balancing point
+\(\boldsymbol{q}_{\text{des}}\) at time step \(k\) is defined by 
 
-        $$
-            \boldsymbol{q}_{\text{err},k} = \boldsymbol{q}_{\text{des}}^{-1} \otimes \boldsymbol{q}_{k}.
-        $$
+$$
+\boldsymbol{q}_{\text{err},k} = \boldsymbol{q}_{\text{des}}^{-1} \otimes
+\boldsymbol{q}_{k}. 
+$$
 
-        Using a first-order approximation, we can find an error vector in Euler angles \(\boldsymbol{\eta}_{\text{err},k} \triangleq \left[\phi_{\text{err},k}, \theta_{\text{err},k}, \psi_{\text{err},k}\right]^\top\) utilizing
+Using a first-order approximation, we can find an error vector in Euler angles 
+\(\boldsymbol{\eta}_{\text{err},k} \triangleq \left[\phi_{\text{err},k},
+\theta_{\text{err},k}, \psi_{\text{err},k}\right]^\top\) utilizing 
 
-        $$
-            \boldsymbol{q}_{\text{err},k} \approx \begin{bmatrix} \frac{\phi_{\text{err,k}}}{2} \\  \frac{\theta_{\text{err,k}}}{2} \\ \frac{\psi_{\text{err,k}}}{2} \\ 1\end{bmatrix} = \begin{bmatrix} \frac{\boldsymbol{\eta}_{\text{err},k}}{2} \\ 1 \end{bmatrix}.
-        $$
-        
-        To aid with damping, the controller used the gyroscopic values to avoid differentiation of the system error. I also implemented a lightweight low-pass filter to help with noisy measurements, namely:
+$$
+\boldsymbol{q}_{\text{err},k} \approx \begin{bmatrix}
+\frac{\phi_{\text{err,k}}}{2} \\  \frac{\theta_{\text{err,k}}}{2} \\
+\frac{\psi_{\text{err,k}}}{2} \\ 1\end{bmatrix} = \begin{bmatrix}
+\frac{\boldsymbol{\eta}_{\text{err},k}}{2} \\ 1 \end{bmatrix}. 
+$$
 
-        $$
-            \boldsymbol{\omega}_{k} = \alpha \boldsymbol{\omega}_{\text{raw},k} + (1 - \alpha) \boldsymbol{\omega}_{k-1}.
-        $$
+To aid with damping, the controller used the gyroscopic values to avoid
+differentiation of the system error. I also implemented a lightweight low-pass
+filter to help with noisy measurements, namely: 
 
-        Assuming independant axis control, the momentum wheel speed to mantain balancing can be designed using the classic PID control.
+$$
+\boldsymbol{\omega}_{k} = \alpha \boldsymbol{\omega}_{\text{raw},k} + (1 -
+\alpha) \boldsymbol{\omega}_{k-1}. 
+$$
 
-        $$
-            \boldsymbol{u}_k = K_p \boldsymbol{\eta}_{\text{err},k} + K_i \sum_{i=0}^{k} \boldsymbol{\eta}_{\text{err},k} + K_d \boldsymbol{\omega}_{k}
-        $$
-    </p>
+Assuming independent axis control, the momentum wheel speed to maintain
+balancing can be designed using the classic PID control. 
+
+$$
+\boldsymbol{u}_k = K_p \boldsymbol{\eta}_{\text{err},k} + K_i \sum_{i=0}^{k}
+\boldsymbol{\eta}_{\text{err},k} + K_d \boldsymbol{\omega}_{k} 
+$$
+</p>
 
 <h2>Balancing Demonstration</h2>
-    
-    <p>
-        After a "considerable" amount of tuning, the following balancing capabilities are achieved (video below). 
-    </p>
 
-    <p align="center">
-        <iframe width="600" height="350" src="https://www.youtube.com/embed/5LkHNn3iz_Y" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </p>
+<p>
+After a "considerable" amount of tuning, the following balancing capabilities
+are achieved (video below).  
+</p>
+
+<p align="center">
+<iframe width="600" height="350" src="https://www.youtube.com/embed/5LkHNn3iz_Y"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 <h2>Odometry and Demonstration</h2>
 
-    <p>
-        The ToppleBot also featured an odometry tracking system, based solely off the IMU data. Defining each corner of the cube as a node, we dynamically updated their positions using the quaternion from the AHRS algorithm. Then, using the projected gravity vector, we determined which corner/node is the "balancing node" and used its displacement from the previous balancing node to update the ToppleBot's world pose. Through multi-threading, the system can quickly send updates to the control station where the odometry can be visualized on RViz (as shown below).
-    </p>
+<p>
+The ToppleBot also featured an odometry tracking system based solely off the
+IMU data. Defining each corner of the cube as a node, we dynamically updated
+their positions using the quaternion from the AHRS algorithm. Then, using the
+projected gravity vector, we determined which corner/node is the "balancing
+node" and used its displacement from the previous balancing node to update the
+ToppleBot's world pose. Through multi-threading, the system can quickly send
+updates to the control station where the odometry can be visualized on RViz (as
+shown below). 
+</p>
 
-    <p align="center">
-        <iframe width="600" height="350" src="https://www.youtube.com/embed/oSa1dvt7C_U" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </p>
+<p align="center">
+<iframe width="600" height="350" src="https://www.youtube.com/embed/oSa1dvt7C_U"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 <!--
-    <p>
-        To combat latency, I split the Micro-ROS publishing and AHRS alogirthm into two different FreeRTOS tasks. The fidelity of the visualization system was gretly improved as a result of this change. I still am working to play with the various frequency parameters, for publishing and updating the algorithm, but the following video shows the recently improved results.
-    </p>
+<p>
+To combat latency, I split the Micro-ROS publishing and AHRS alogirthm into two different FreeRTOS tasks. The fidelity of the visualization system was gretly improved as a result of this change. I still am working to play with the various frequency parameters, for publishing and updating the algorithm, but the following video shows the recently improved results.
+</p>
 
-     ToppleBot Odometry Video, Updated, Centered 
-    <p align="center">
-        <iframe width="600" height="350" src="https://www.youtube.com/embed/AF9I7S65SIE" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </p>
+ToppleBot Odometry Video, Updated, Centered 
+<p align="center">
+<iframe width="600" height="350" src="https://www.youtube.com/embed/AF9I7S65SIE" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
- Current Status and Media
+Current Status and Media
 <h2>Odometry System</h2>
 
-    <p>
-        We start by defining the node positions in the body-fixed frame \( \mathbf{p}_i^b \). Nodes \( i = 0 \) to \( 7 \) represent the ToppleBot's corners, and \( i = 8 \) represents the center (origin) of the body-fixed frame. These positions are parameterized by the cube's side length \( l \), which can be adjusted to support an arbitrary cube size.
+<p>
+We start by defining the node positions in the body-fixed frame \( \mathbf{p}_i^b \). Nodes \( i = 0 \) to \( 7 \) represent the ToppleBot's corners, and \( i = 8 \) represents the center (origin) of the body-fixed frame. These positions are parameterized by the cube's side length \( l \), which can be adjusted to support an arbitrary cube size.
 
-        During initialization, we acquire the first quaternion from the IMU, \( \mathbf{q}_{\text{init}} \), and compute its inverse as a correction factor:
-    
-        $$
-            \mathbf{q}_{\text{corr}} = \mathbf{q}_{\text{init}}^{-1}
-        $$
-    
-        All subsequent IMU quaternions are corrected using quaternion multiplication:
-    
-        $$
-            \mathbf{q}(t) = \mathbf{q}_{\text{corr}} \otimes \mathbf{q}_{\text{raw}}(t)
-        $$
-    
-        Node positions in the world frame are then computed using an active rotation via the quaternion-derived rotation matrix:
-    
-        $$
-            \mathbf{p}_i^w = R(\mathbf{q}(t)) \cdot \mathbf{p}_i^b
-        $$
+During initialization, we acquire the first quaternion from the IMU, \( \mathbf{q}_{\text{init}} \), and compute its inverse as a correction factor:
 
-        The "balancing node", the one determined to be touching the earth's \(xy\) plane, can be determined using it's difference from \(\mathbf{g}_{\text{dir}}\) in the world frame. First, we find the normalized vectors from the body-fixed origin to the node positions in the world frame:
+$$
+    \mathbf{q}_{\text{corr}} = \mathbf{q}_{\text{init}}^{-1}
+$$
 
-        $$
-            \mathbf{u}_i = \frac{\mathbf{p}_i^w - \mathbf{p}_8^w}{\left\| \mathbf{p}_i^w - \mathbf{p}_8^w \right\|}
-        $$
+All subsequent IMU quaternions are corrected using quaternion multiplication:
 
-        We know that in the world frame, gravity points straight down:
-        
-        $$
-            \mathbf{g}_{\text{dir}} = \begin{bmatrix} 0 \\ 0 \\ -1 \end{bmatrix}
-        $$
+$$
+    \mathbf{q}(t) = \mathbf{q}_{\text{corr}} \otimes \mathbf{q}_{\text{raw}}(t)
+$$
 
-        Our balancing node is then determined as follows: 
-        
-        $$
-            i_{\text{balance}} = \arg\min_i \left\| \mathbf{u}_i - \mathbf{g}_{\text{dir}} \right\|
-        $$
+Node positions in the world frame are then computed using an active rotation via the quaternion-derived rotation matrix:
 
-        Once the balancing node index \( i_{\text{balance}} \) is identified, we compute two key translations:
+$$
+    \mathbf{p}_i^w = R(\mathbf{q}(t)) \cdot \mathbf{p}_i^b
+$$
 
-        <ul>
-            <li>\( \mathbf{p}_{\text{bl}} \): the position of the body-fixed frame origin (node 8) relative to the balancing node in the world frame.</li> 
-            <li>\( \mathbf{p}_{\text{bn}} \): the cumulative displacement of the balancing node in the world frame.</li> 
-        </ul>
+The "balancing node", the one determined to be touching the earth's \(xy\) plane, can be determined using it's difference from \(\mathbf{g}_{\text{dir}}\) in the world frame. First, we find the normalized vectors from the body-fixed origin to the node positions in the world frame:
 
-        If the balancing node changes from the previous time step, we calculate its displacement:
+$$
+    \mathbf{u}_i = \frac{\mathbf{p}_i^w - \mathbf{p}_8^w}{\left\| \mathbf{p}_i^w - \mathbf{p}_8^w \right\|}
+$$
 
-        $$
-            \Delta \mathbf{p}_{\text{bn}} = \mathbf{p}_{i_{\text{balance}}}^w - \mathbf{p}_{i_{\text{last}}}^w
-        $$
+We know that in the world frame, gravity points straight down:
 
-        and update the global position of the balancing node:
+$$
+    \mathbf{g}_{\text{dir}} = \begin{bmatrix} 0 \\ 0 \\ -1 \end{bmatrix}
+$$
 
-        $$
-            \mathbf{p}_{\text{bn}}(t) = \mathbf{p}_{\text{bn}}(t-1) + \Delta \mathbf{p}_{\text{bn}}
-        $$
+Our balancing node is then determined as follows: 
 
-        The translation from the balancing node to the base link (node 8) is given by:
+$$
+    i_{\text{balance}} = \arg\min_i \left\| \mathbf{u}_i - \mathbf{g}_{\text{dir}} \right\|
+$$
 
-        $$
-            \mathbf{p}_{\text{bl}} = \mathbf{p}_8^w - \mathbf{p}_{i_{\text{balance}}}^w
-        $$
+Once the balancing node index \( i_{\text{balance}} \) is identified, we compute two key translations:
 
-        Finally, two transforms are broadcast:
+<ul>
+    <li>\( \mathbf{p}_{\text{bl}} \): the position of the body-fixed frame origin (node 8) relative to the balancing node in the world frame.</li> 
+    <li>\( \mathbf{p}_{\text{bn}} \): the cumulative displacement of the balancing node in the world frame.</li> 
+</ul>
 
-        $$
-            T_{\text{base\_link}}^{\text{balancing\_node}} = \left( \mathbf{p}_{\text{bl}},\ \mathbf{q}(t) \right)
-        $$
+If the balancing node changes from the previous time step, we calculate its displacement:
 
-        $$
-            T_{\text{balancing\_node}}^{\text{world}} = \left( \mathbf{p}_{\text{bn}},\ \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix} \right)
-        $$
+$$
+    \Delta \mathbf{p}_{\text{bn}} = \mathbf{p}_{i_{\text{balance}}}^w - \mathbf{p}_{i_{\text{last}}}^w
+$$
 
-        These transforms enable visualization and odometry within RViz, where the robot's orientation and position are expressed with respect to the world frame via the dynamically selected balancing node.
+and update the global position of the balancing node:
 
-    </p>
-    -->
+$$
+    \mathbf{p}_{\text{bn}}(t) = \mathbf{p}_{\text{bn}}(t-1) + \Delta \mathbf{p}_{\text{bn}}
+$$
+
+The translation from the balancing node to the base link (node 8) is given by:
+
+$$
+    \mathbf{p}_{\text{bl}} = \mathbf{p}_8^w - \mathbf{p}_{i_{\text{balance}}}^w
+$$
+
+Finally, two transforms are broadcast:
+
+$$
+    T_{\text{base\_link}}^{\text{balancing\_node}} = \left( \mathbf{p}_{\text{bl}},\ \mathbf{q}(t) \right)
+$$
+
+$$
+    T_{\text{balancing\_node}}^{\text{world}} = \left( \mathbf{p}_{\text{bn}},\ \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix} \right)
+$$
+
+These transforms enable visualization and odometry within RViz, where the robot's orientation and position are expressed with respect to the world frame via the dynamically selected balancing node.
+
+</p>
+-->

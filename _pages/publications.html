@@ -11,26 +11,188 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<div class="publications-wrapper">
+
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+  {% for category in site.publication_category %}
+    {% assign has_posts = false %}
+    {% for post in site.publications %}
+      {% if post.category == category[0] %}
+        {% assign has_posts = true %}
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
     {% endfor %}
+
+    {% if has_posts %}
+      <h2 class="pub-category-heading">{{ category[1].title }}</h2>
+      <hr class="pub-divider" />
+
+      {% for post in site.publications reversed %}
+        {% if post.category != category[0] %}
+          {% continue %}
+        {% endif %}
+
+        <div class="pub-card">
+          <div class="pub-main">
+            <p class="pub-title">{{ post.title }}</p>
+            {% if post.authors %}
+              <p class="pub-authors">{{ post.authors }}</p>
+            {% endif %}
+            <p class="pub-venue">{{ post.venue }}{% if post.date %} &mdash; {{ post.date | date: "%Y" }}{% endif %}</p>
+            {% if post.tldr %}
+              <p class="pub-tldr"><span class="tldr-label">TL;DR</span> {{ post.tldr }}</p>
+            {% endif %}
+          </div>
+          <div class="pub-links">
+            {% if post.paperurl %}
+              <a href="{{ post.paperurl }}" class="pub-link" target="_blank">arXiv</a>
+            {% endif %}
+            {% if post.codeurl %}
+              <a href="{{ post.codeurl }}" class="pub-link" target="_blank">code</a>
+            {% endif %}
+            {% if post.videourl %}
+              <a href="{{ post.videourl }}" class="pub-link" target="_blank">video</a>
+            {% endif %}
+            <a href="{{ post.url }}" class="pub-link">details</a>
+          </div>
+        </div>
+
+      {% endfor %}
+    {% endif %}
   {% endfor %}
+
 {% else %}
   {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+
+    <div class="pub-card">
+      <div class="pub-main">
+        <p class="pub-title">{{ post.title }}</p>
+        {% if post.authors %}
+          <p class="pub-authors">{{ post.authors }}</p>
+        {% endif %}
+        <p class="pub-venue">{{ post.venue }}{% if post.date %} &mdash; {{ post.date | date: "%Y" }}{% endif %}</p>
+        {% if post.tldr %}
+          <p class="pub-tldr"><span class="tldr-label">TL;DR</span> {{ post.tldr }}</p>
+        {% endif %}
+      </div>
+      <div class="pub-links">
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}" class="pub-link" target="_blank">PDF / arXiv</a>
+        {% endif %}
+        {% if post.codeurl %}
+          <a href="{{ post.codeurl }}" class="pub-link" target="_blank">Code</a>
+        {% endif %}
+        {% if post.videourl %}
+          <a href="{{ post.videourl }}" class="pub-link" target="_blank">Video</a>
+        {% endif %}
+        <a href="{{ post.url }}" class="pub-link">Details</a>
+      </div>
+    </div>
+
   {% endfor %}
 {% endif %}
 
+</div>
 
+<style>
+.publications-wrapper {
+  margin-top: 1rem;
+}
 
+.pub-category-heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.pub-divider {
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.pub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fafafa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pub-card:hover {
+  border-color: #b0b0b0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.pub-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+  color: #111;
+}
+
+.pub-authors {
+  font-size: 0.875rem;
+  color: #555;
+  margin: 0;
+}
+
+.pub-venue {
+  font-size: 0.85rem;
+  color: #777;
+  font-style: italic;
+  margin: 0;
+}
+
+.pub-tldr {
+  font-size: 0.875rem;
+  color: #444;
+  margin: 0.15rem 0 0;
+  line-height: 1.5;
+}
+
+.tldr-label {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #888;
+  margin-right: 0.35rem;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.pub-link {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  /* text-transform: uppercase; */
+  color: #52adc8;
+  text-decoration: none;
+  border: 1px solid #52adc8;
+  border-radius: 3px;
+  padding: 0.2rem 0.6rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.pub-link:hover {
+  background: #52adc8;
+  color: #fff;
+  text-decoration: none;
+}
+</style>
