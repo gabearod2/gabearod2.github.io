@@ -6,56 +6,87 @@ redirect_from:
   - /about/
   - /about.html
 ---
----
-Hello! My name is Gabriel Rodriguez and I'm an
-[MSR](https://www.ri.cmu.edu/education/academic-programs/master-of-science-robotics/)
+
+I'm an [MSR](https://www.ri.cmu.edu/education/academic-programs/master-of-science-robotics/)
 student at [Carnegie Mellon's Robotics Institute](https://www.ri.cmu.edu/),
-where I'm advised by [Dr. Wennie Tabib](https://wtabib.com/) at the
-[RISLab](https://rislab.org/). This summer, I am working as a Controls Intern at
-[Allen Control Systems](https://www.allencontrolsystems.com/).
+advised by [Dr. Wennie Tabib](https://wtabib.com/) at the
+[RISLab](https://rislab.org/). This summer I am working as a Controls Intern at
+[Allen Control Systems](https://www.allencontrolsystems.com/) in Austin, TX.
 
+My research interests lie at the intersection of classical control and learning,
+with a focus on aggressive and agile aerial robotics.
 
-Generally, I’m passionate about robotics, with a particular interest in the
-intersection classical control methods and learning.
+I graduated from [Embry-Riddle Aeronautical University](https://erau.edu/) with
+dual degrees in Aerospace Engineering and Engineering Physics (minor in Applied
+Mathematics), receiving the Engineering Physics Outstanding Scholar Award.
+Previously I held research and engineering roles at
+[MIT Lincoln Laboratory](https://www.ll.mit.edu/r-d/isr-systems-and-technology),
+[ERAU's Engineering Physics Propulsion Lab](https://eppl.us/), and
+[Textron Systems](https://www.textronsystems.com/).
 
-Previously, I graduated from [Embry-Riddle Aeronautical University
-(ERAU)](https://erau.edu/) with dual degrees in [Aerospace
-Engineering](https://daytonabeach.erau.edu/college-engineering/aerospace) and
-[Engineering
-Physics](https://daytonabeach.erau.edu/college-arts-sciences/physical-sciences)
-(minor in Applied Mathematics), where I won the Engineering Physics Outstanding
-Scholar Award. My past experience spans research roles and internships at MIT
-Lincoln Laboratory's Controls and Autonomous Systems Group (now named the
-[Tactical Autonomy
-Group](https://www.ll.mit.edu/r-d/isr-systems-and-technology)), ERAU's 
-[Engineering Physics Propulsion Lab](https://eppl.us/), and [Textron
-Systems](https://www.textronsystems.com/).
- 
-# News
----
-**05-27-2026:** My first paper, **"AcroRL: Learning Aggressive Quadrotor Inversion
-using Bidirectional Thrust"** is now available on [arXiv](). See the paper
-website [here]().
+## News
 
-**05-20-2026:** Started as a Controls Intern at
-[ACS](https://www.allencontrolsystems.com/) in Austin, TX.
+<div class="news-table">
+  <div class="news-row">
+    <span class="news-date">May 2026</span>
+    <span class="news-text">My first paper <strong><span style="font-variant:small-caps">AcroRL</span>: Learning Aggressive Quadrotor Inversion using Bidirectional Thrust</strong> is on <a href="">arXiv</a>. Paper website <a href="">here</a>.</span>
+  </div>
+  <div class="news-row">
+    <span class="news-date">May 2026</span>
+    <span class="news-text">Started as a Controls Intern at <a href="https://www.allencontrolsystems.com/">Allen Control Systems</a>.</span>
+  </div>
+  <div class="news-row">
+    <span class="news-date">Aug 2025</span>
+    <span class="news-text">Joined the <a href="https://rislab.org/">RISLab</a> as a Graduate Research Assistant.</span>
+  </div>
+</div>
 
-**08-27-2025:** Joined the [RISLab](https://rislab.org/) as a Graduate Research Assistant.
+<style>
+.news-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0.75rem;
+  border-top: 1px solid #e0e0e0;
+}
 
+.news-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: baseline;
+}
+
+.news-date {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #888;
+  white-space: nowrap;
+  min-width: 5rem;
+  text-transform: uppercase;
+}
+
+.news-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+</style>
 
 ---
 
 <div style="display: flex; justify-content: space-between; gap: 10px; width: 100%; box-sizing: border-box;">
   <img src="images/about/blue_belt.jpg" alt="Blue Belt" 
-       style="width: calc(33.33% - 6.66px); height: auto; border-radius: 8px; object-fit: cover; border: 1px solid black;">
+       style="width: calc(33.33% - 6.66px); height: auto; border-radius: 8px; object-fit: cover; border: 1px solid #ddd;">
   <img src="images/about/grad.jpg" alt="Graduation" 
-       style="width: calc(33.33% - 6.66px); height: auto; border-radius: 8px; object-fit: cover; border: 1px solid black;">
+       style="width: calc(33.33% - 6.66px); height: auto; border-radius: 8px; object-fit: cover; border: 1px solid #ddd;">
   <img src="images/about/amigo_surgery.jpg" alt="AMIGO Surgery" 
-       style="width: calc(33.33% - 6.66px); height: auto; border-radius: 8px; object-fit: cover; border: 1px solid black;">
+       style="width: calc(33.33% - 6.66px); height: auto; border-radius: 8px; object-fit: cover; border: 1px solid #ddd;">
 </div>
 
 <div style="width: 100%; box-sizing: border-box; margin-top: 10px;">
   <img src="images/about/quad_control.jpg" alt="Cascaded Control" 
-       style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; border: 1px solid black;">
+       style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; border: 1px solid #ddd;">
 </div>
-
