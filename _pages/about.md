@@ -29,7 +29,7 @@ ERAU's [Engineering Physics Propulsion Lab](https://eppl.us/), and
 <div class="news-table">
   <div class="news-row">
     <span class="news-date">May 2026</span>
-    <span class="news-text">My first paper <strong><span style="font-variant:small-caps">AcroRL</span>: Learning Aggressive Quadrotor Inversion using Bidirectional Thrust</strong> is on <a href="">arXiv</a>. Paper website <a href="">here</a>.</span>
+    <span class="news-text">My first paper <strong><span style="font-variant:small-caps">AcroRL</span>: Learning Aggressive Quadrotor Inversion using Bidirectional Thrust</strong> is on <a href="https://arxiv.org/abs/2605.24301">arXiv</a>.</span>
   </div>
   <div class="news-row">
     <span class="news-date">May 2026</span>

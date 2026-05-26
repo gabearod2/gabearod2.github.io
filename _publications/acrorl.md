@@ -4,9 +4,9 @@ collection: publications
 category: conferences
 permalink: /publication/acrorl
 date: 2026-05-22
-venue: 'arXiv preprint arXiv:submit/7620198'
+venue: 'preprint'
 authors: 'Gabriel Rodriguez*, <a href="https://www.linkedin.com/in/henri-sayag/">Henri Sayag</a>, <a href="https://www.linkedin.com/in/amrathod/">Abhishek Rathod</a>, <a href="https://www.ri.cmu.edu/ri-people/john-stecklein/">John Stecklein</a>, <a href="https://www.linkedin.com/in/sisaha/"> Siddharth Saha</a>, <a href="https://www.linkedin.com/in/christopher-barngrover-7134538b/"> Christopher Barngrover</a>, <a href="http://wtabib.com/">Wennie Tabib</a>'
-paperurl: 'https://arxiv.org/abs/submit/7620198'
+paperurl: 'https://arxiv.org/abs/2605.24301'
 codeurl: 'https://github.com/rislab/acrorl'
 videourl: 'https://youtu.be/7pPTKY5KKtU'
 tldr: 'A reinforcement learning framework that trains separate policies for compact, position-constrained quadrotor inversions using bidirectional thrust, reducing position RMSE by 32% and settling time by 57% over the best optimization-based baseline, with successful zero-shot hardware transfer.'
