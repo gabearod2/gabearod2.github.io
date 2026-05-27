@@ -43,6 +43,9 @@ author_profile: true
             {% endif %}
           </div>
           <div class="pub-links">
+            {% if post.websiteurl %}
+              <a href="{{ post.websiteurl }}" class="pub-link" target="_blank">website</a>
+            {% endif %}
             {% if post.paperurl %}
               <a href="{{ post.paperurl }}" class="pub-link" target="_blank">arXiv</a>
             {% endif %}
