@@ -5,7 +5,7 @@ category: preprints
 permalink: /publication/pedirl
 date: 2026-06-05
 venue: 'preprint'
-authors: '<a href="https://www.linkedin.com/in/gulsum-tuba-cibuk/">Tuba Girgin</a>, <a href="https://www.linkedin.com/in/jose-castelblanco-002640195/">Jose Castelblanco</a>, Gabriel Rodriguez, <a href="https://www.linkedin.com/in/girgin-emre/">Emre Girgin</a>, <a href="https://www.linkedin.com/in/kcagri/">Cagri Kilic</a>
+authors: '<a href="https://www.linkedin.com/in/gulsum-tuba-cibuk/">Tuba Girgin</a>, <a href="https://www.linkedin.com/in/jose-castelblanco-002640195/">Jose Castelblanco</a>, Gabriel Rodriguez, <a href="https://www.linkedin.com/in/girgin-emre/">Emre Girgin</a>, <a href="https://www.linkedin.com/in/kcagri/">Cagri Kilic</a>'
 paperurl: 'https://arxiv.org/abs/2606.07506'
 tldr: 'A hierarchical reinforcement learning framework enables quadruped robots to autonomously choose where to stand and how to interact with objects, eliminating the need for hand-designed manipulation trajectories.'
 ---
