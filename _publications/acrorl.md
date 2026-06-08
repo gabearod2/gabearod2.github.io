@@ -1,7 +1,7 @@
 ---
 title: "<span style='font-variant: small-caps'>AcroRL</span>: Learning Aggressive Quadrotor Inversion using Bidirectional Thrust"
 collection: publications
-category: conferences
+category: preprints
 permalink: /publication/acrorl
 date: 2026-05-22
 venue: 'preprint'
