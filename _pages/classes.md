@@ -5,6 +5,13 @@ permalink: /classes/
 author_profile: true
 ---
 
+## Fall 2026
+### Advanced Control for Robotics
+This course discusses advanced control algorithms that enable robots to behave more intelligently. It is designed for students interested in advanced control. Key topics include model predictive control, adaptive control, iterative learning control, and Lyapunov theory.
+
+### Deep Reinforcement Learning & Control 
+This course will cover latest advances in Reinforcement Learning and Imitation learning. This is a fast developing research field and an official textbook is available only for about one fourth of the course material. The rest will be taught from recent research papers. This course brings together many disciplines of Artificial Intelligence to show how to develop intelligent agent that can learn to sense the world and learn to act imitating others or maximizing sparse rewards Particular focus will be given in incorporating visual sensory input and learning suitable visual state representations.
+
 ## Spring 2026
 ### Optimal Control & Reinforcement Learning
 

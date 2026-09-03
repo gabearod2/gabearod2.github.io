@@ -31,6 +31,7 @@ ERAU's [Engineering Physics Propulsion Lab](https://eppl.us/), and
 <div class="news-table">
   <div class="news-row"> 
     <span class="news-date">August 2026</span> <span class="news-text">Accepted a full-time return offer from <a href="https://www.allencontrolsystems.com/">Allen Control Systems</a> as a GNC Engineer and returned to Pittsburgh for my final year at CMU!</span>
+  </div>
   <div class="news-row">
     <span class="news-date">June 2026</span>
     <span class="news-text"><strong>Affordance-Based Hierarchical Reinforcement Learning for Quadruped Pedipulation</strong>, is now available <a href="https://arxiv.org/abs/2606.07506">here</a>. This work leverages my open-source Go2 RL deployment framework, <a href="https://github.com/eppl-erau-db/go2_rl_ws">go2_rl_ws</a>.</span>
