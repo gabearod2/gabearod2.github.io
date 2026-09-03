@@ -21,7 +21,7 @@ I graduated from [Embry-Riddle Aeronautical University](https://erau.edu/) with
 dual degrees in Aerospace Engineering and Engineering Physics (minor in Applied
 Mathematics), receiving the Engineering Physics Outstanding Scholar Award.
 I've held research and engineering internship roles at
-[Allen Control Systems](https://www.allencontrolsystems.com/)
+[Allen Control Systems](https://www.allencontrolsystems.com/),
 [MIT Lincoln Laboratory](https://www.ll.mit.edu/r-d/isr-systems-and-technology),
 ERAU's [Engineering Physics Propulsion Lab](https://eppl.us/), and
 [Textron Systems](https://www.textronsystems.com/).
