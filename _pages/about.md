@@ -29,8 +29,12 @@ ERAU's [Engineering Physics Propulsion Lab](https://eppl.us/), and
 ## News
 
 <div class="news-table">
+  <div class="news-row">
+    <span class="news-date">Sept 2026</span>
+    <span class="news-text"><strong><span style="font-variant:small-caps">AcroRL</span>: Learning Aggressive Quadrotor Inversion using Bidirectional Thrust</strong> was accepted to <a href="https://www.corl.org/">CoRL 2026</a>!</span>
+  </div>
   <div class="news-row"> 
-    <span class="news-date">August 2026</span> <span class="news-text">Accepted a full-time return offer from <a href="https://www.allencontrolsystems.com/">Allen Control Systems</a> as a GNC Engineer and returned to Pittsburgh for my final year at CMU!</span>
+    <span class="news-date">Aug 2026</span> <span class="news-text">Accepted a full-time return offer from <a href="https://www.allencontrolsystems.com/">Allen Control Systems</a> as a GNC Engineer and returned to Pittsburgh for my final year at CMU!</span>
   </div>
   <div class="news-row">
     <span class="news-date">June 2026</span>
