@@ -9,4 +9,5 @@ bundle exec jekyll serve --livereload --host 127.0.0.1
 ```
 
 ## TODO:
-- add publications section to 
+- add publications section to cv `feature/cv_updates`
+- add risl acro flight project `feature/acro`
